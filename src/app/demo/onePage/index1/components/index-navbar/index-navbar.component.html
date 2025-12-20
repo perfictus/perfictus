@@ -1,0 +1,40 @@
+<header>
+    <div id="vl-header-sticky" class="vl-header-area1 header-tranperent" [class.header-sticky]="isSticky">
+        <div class="container header1-bg">
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-md-6 col-6">
+                    <div class="vl-logo">
+                        <a routerLink="/" class="header1-logo-block"><img src="assets/img/logo/white-logo.png"
+                                alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-7 d-none d-lg-block text-end">
+                    <div class="vl-main-menu">
+                        <app-single-navbar />
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="vl-header1-btns text-end d-none d-lg-block">
+                        <div class="buttons">
+                            <div class="vl-search1">
+                                <app-search-button (searchOpened)="handleSearchOpened()"/>
+                            </div>
+                            <a routerLink="/contact" class="theme-btn1">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="vl-header-action-item d-block d-lg-none">
+                        <button type="button" class="vl-offcanvas-toggle" (click)="toggleMenu()">
+                            <i class="fa-duotone fa-solid fa-bars-staggered"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<app-mobile-menu  [isMenuOpen]="isMenuOpen"
+(closeMenuEvent)="closeMenu()"/>
+
+<app-search-popup [isVisible]="isSearchOpened"
+(closePopup)="handleClosePopup()"/>

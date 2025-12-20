@@ -1,0 +1,140 @@
+<div class="tes7-blog7-sec sp">
+    <!--=== TESTIMONIAL AREA START === -->
+
+    <div class="tes7">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="heading7">
+                        <span class="sub-title" data-aos="zoom-in-left" data-aos-duration="900"><img
+                                src="assets/img/icons/span1.svg" alt=""> TESTIMONIALS</span>
+                        <h2 class="text-anime-style-3">Hear From Our Happy Partners</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="button text-end md:text-start sm:text-start md:mt-20 sm:mt-20" data-aos="fade-left"
+                        data-aos-duration="800">
+                        <a routerLink="/testimonial" class="theme-btn13">
+                            See All Reviews
+                            <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i
+                                    class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tes7-slider-all mt-60" data-aos="fade-up" data-aos-duration="900">
+                        <ngx-slick-carousel [config]="testimonialConfig"   class="tes7-slider">
+                            @for (item of testimonial; track $index) {
+                            <div ngxSlickItem class="tes7-single-slider">
+                                <div class="qoute">
+                                    <img [src]="item.image" alt="">
+                                </div>
+                                <div class="stars">
+                                    <ul>
+                                        <li class="star"><i class="fa-solid fa-star"></i></li>
+                                        <li class="star"><i class="fa-solid fa-star"></i></li>
+                                        <li class="star"><i class="fa-solid fa-star"></i></li>
+                                        <li class="star"><i class="fa-solid fa-star"></i></li>
+                                        <li class="star"><i class="fa-solid fa-star"></i></li>
+                                        <li class="rating-text">(5) Rating</li>
+                                    </ul>
+                                </div>
+                                <div class="content">
+                                    <p>"{{item.quote}}"</p>
+                                </div>
+                                <div class="author-area">
+                                    <div class="author-thumb">
+                                        <img [src]="item.image" alt="">
+                                    </div>
+                                    <div class="author-ifo ml-16 heading7">
+                                        <h4><a href="javascript:void(0);">{{item.name}}</a></h4>
+                                        <p class="mt-1">{{item.designation}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        </ngx-slick-carousel>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--=== TESTIMONIAL AREA END === -->
+
+    <!--=== BLOG AREA START === -->
+
+    <div class="blog7 pt-120 md:pt-50 sm:pt-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="heading7">
+                        <span class="sub-title" data-aos="zoom-in-left" data-aos-duration="900"><img
+                                src="assets/img/icons/span1.svg" alt=""> BLOG</span>
+                        <h2 class="text-anime-style-3">Stay Updated with Perfictus Blog</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="button text-end md:text-start sm:text-start md:mt-20 sm:mt-20">
+                        <a routerLink="/blog" class="theme-btn13">
+                            View All Blogs
+                            <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i
+                                    class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-30">
+                <div class="col-lg-12">
+                    <div class="vl-blog-7-item mt-30" data-aos="fade-up" data-aos-duration="900">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class=" vl-blog-7-thumb image-anime overflow-hidden _relative">
+                                    <img class="w-full" src="assets/img/blog/blog7-image.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="vl-blog-7-content heading7">
+                                    <div class="vl-blog7-meta pb-16">
+                                        <a href="javascript:void(0);" class="date"><img src="assets/img/icons/date1.svg" alt="">
+                                            12/12/2024</a>
+                                        <a href="javascript:void(0);" class="author"><img src="assets/img/icons/author1.svg" alt=""> John
+                                            Doe</a>
+                                    </div>
+                                    <h3><a [routerLink]="'/blog-details'">The Ultimate Guide to Scaling Your Business with
+                                            Affiliate Marketing</a></h3>
+                                    <p class="mt-16">Affiliate marketing is more than just a trend; it's a powerful tool
+                                        for scaling businesses. In this blog we delve into how businesses.</p>
+                                    <a [routerLink]="'/blog-details'" class="learn1">Read More <span class="arrow1"><i
+                                                class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i
+                                                class="fa-solid fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @for (item of blog; track $index) {
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+                    <div class="vl-blog-7-item mt-30">
+                        <div class="vl-blog-7-content heading7">
+                            <div class="vl-blog7-meta pb-16">
+                                <a href="javascript:void(0);" class="date"><img [src]="item.image" alt=""> {{item.date}}</a>
+                                <a href="javascript:void(0);" class="author"><img [src]="item.authorImage" alt=""> {{item.author}}</a>
+                            </div>
+                            <h5><a [routerLink]="item.link">{{item.title}}</a></h5>
+                            <a [routerLink]="item.link" class="learn1">Read More <span class="arrow1"><i
+                                        class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i
+                                        class="fa-solid fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            }
+            </div>
+        </div>
+    </div>
+
+    <!--=== BLOG AREA END === -->
+</div>

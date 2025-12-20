@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Perfictus</title>
+    <base href="/" />
+    <!-- <base href="/perfictus-ng/"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="assets/img/logo/perfictus_logo.svg" />
+
+    <style>
+      #splash-screen {
+        z-index: 9999;
+        display: block;
+      }
+
+      #splash-screen.remove {
+        animation: fadeout 0.7s forwards;
+      }
+
+      @keyframes fadeout {
+        to {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <app-root id="root"></app-root>
+
+    <!-- <div id="splash-screen" class="preloader7">
+      <div id="preloader">
+        <div class="progress-bar"></div>
+        <div class="title-logo">
+          <img
+            src="assets/img/logo/preloader-icon1.png"
+            alt="SEO Marketing Logo"
+          />
+        </div>
+      </div>
+    </div> -->
+
+    <script>
+      const rootEl = document.querySelector('#root')
+      new MutationObserver(() => {
+        document.querySelector('#splash-screen')?.classList.add('remove')
+      }).observe(rootEl, { childList: true })
+    </script>
+  </body>
+</html>

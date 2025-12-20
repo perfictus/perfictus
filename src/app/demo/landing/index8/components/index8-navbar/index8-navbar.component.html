@@ -1,0 +1,46 @@
+<header>
+
+    <div id="vl-header-sticky" class="vl-header-area10 header-tranperent" [class.header-sticky]="isSticky">
+        <div class="container header2-bg">
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-md-6 col-6">
+                    <div class="vl-logo">
+                        <a routerLink="/" class="header1-logo-block"><img src="assets/img/logo/black-logo.png"
+                                alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-7 d-none d-lg-block text-end">
+                    <div class="vl-main-menu">
+                        <app-navbars btnColor="theme-btn19"/>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="vl-header8-btns text-end d-none d-lg-block">
+                        <div class="buttons">
+                            <div class="vl-search1">
+                                <app-search-button (searchOpened)="handleSearchOpened()"/>
+                            </div>
+                            <div class="">
+                                <a routerLink="/service" class="theme-btn19" bis_skin_checked="1">
+                                    Grow Social Media
+                                    <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span><span
+                                        class="arrow2"><i class="fa-solid fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vl-header-action-item d-block d-lg-none">
+                        <button type="button" class="vl-offcanvas-toggle" (click)="toggleMenu()">
+                            <i class="fa-duotone fa-solid fa-bars-staggered"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<app-search-popup [isVisible]="isSearchOpened"
+(closePopup)="handleClosePopup()"/>
+<app-landing-mobile-menu  [isMenuOpen]="isMenuOpen"
+(closeMenuEvent)="closeMenu()"/>

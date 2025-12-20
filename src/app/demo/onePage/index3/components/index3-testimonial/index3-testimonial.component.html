@@ -1,0 +1,69 @@
+<div class="tes6 sp sec-bg4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="heading5">
+                    <span class="sub-title" data-aos="zoom-in-left" data-aos-duration="900"><img
+                            src="assets/img/icons/span5.svg" alt="">OUR TESTIMONIALS </span>
+                    <h2 class="text-anime-style-3">Real Stories, Real Success </h2>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="button text-end sm:text-start md:text-start md:mt-30 sm:mt-30" data-aos="fade-left"
+                    data-aos-duration="1000">
+                    <a class="theme-btn10" routerLink="/blog">View All Review <span class="arrow1"><i
+                                class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="tes5-all-area" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="tes5-left-area">
+                            <div class="reting-area">
+                                <div class="titile">
+                                    <h2>{{ rating }} <span><i class="fa-solid fa-star"></i></span></h2>
+                                    <p>{{ reviewCount }}</p>
+                                </div>
+                                <h3>"{{ title }}"</h3>
+                            </div>
+                            <div class="tes5-slider-btns">
+                                <button class="tes5-next-arrow"><i class="fa-regular fa-angle-left"></i></button>
+                                <button class="tes5-prev-arrow"><i class="fa-regular fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tes5-slider-area">
+                            <ngx-slick-carousel [config]="slickConfig" class="tes5-slider">
+                                @for (item of testimonials; track $index) {
+                                <div ngxSlickItem class="tes5-single-slider">
+                                    <div class="brand-logo">
+                                        <img [src]="item.brandLogo" alt="">
+                                    </div>
+                                    <p>{{ item.testimonial }}</p>
+                                    <div class="author-area">
+                                        <div class="author_thumb">
+                                            <img [src]="item.authorImage" alt="">
+                                        </div>
+                                        <div class="author_text">
+                                            <a href="javascript:void(0);">{{ item.authorName }}</a>
+                                            <p>{{ item.authorPosition }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                }
+                            </ngx-slick-carousel>
+                        </div>
+                    </div>
+                </div>
+                <div class="circle-shape">
+                    <img [src]="circleShape" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

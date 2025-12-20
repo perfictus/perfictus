@@ -1,0 +1,216 @@
+<app-breadcrumb [title]="'Frequently Asked Question'" />
+
+
+<div class="sp">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 m-auto">
+                <div class="research-faq">
+                    <h3>Common Questions About Perfictus Services</h3>
+                    <div class="accordion accordion1" id="accordionExample" ngbAccordion [closeOthers]="true">
+                        <div class="accordion-item" ngbAccordionItem [class.active]="activePanel === 'panel-0'"
+                            (shown)="onPanelShown('panel-0')" [collapsed]="false">
+                            <h2 class="accordion-header" ngbAccordionHeader>
+                                <button class="accordion-button" ngbAccordionButton type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    What Is Perfictus?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" ngbAccordionCollapse
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body" ngbAccordionBody>
+                                    <p>The timeline for SEO results can vary depending on factors like the
+                                        competitiveness of your industry, the condition of your website, and the scope
+                                        of the SEO strategy. On average, clients start seeing improvements in 3-6
+                                        months, though some may see faster results depending on specific circumstances.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" ngbAccordionItem [class.active]="activePanel === 'panel-1'"
+                            (shown)="onPanelShown('panel-1')">
+                            <h2 class="accordion-header" ngbAccordionHeader>
+                                <button class="accordion-button collapsed" ngbAccordionButton type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    What SEO services does Perfictus offer?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" ngbAccordionCollapse
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body" ngbAccordionBody>
+                                    <p>The timeline for SEO results can vary depending on factors like the
+                                        competitiveness of your industry, the condition of your website, and the scope
+                                        of the SEO strategy. On average, clients start seeing improvements in 3-6
+                                        months, though some may see faster results depending on specific circumstances.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" ngbAccordionItem [class.active]="activePanel === 'panel-2'"
+                            (shown)="onPanelShown('panel-2')">
+                            <h2 class="accordion-header" ngbAccordionHeader>
+                                <button class="accordion-button collapsed" ngbAccordionButton type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Do you guarantee top rankings in search engines?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" ngbAccordionCollapse
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body" ngbAccordionBody>
+                                    <p>The timeline for SEO results can vary depending on factors like the
+                                        competitiveness of your industry, the condition of your website, and the scope
+                                        of the SEO strategy. On average, clients start seeing improvements in 3-6
+                                        months, though some may see faster results depending on specific circumstances.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" ngbAccordionItem [class.active]="activePanel === 'panel-3'"
+                            (shown)="onPanelShown('panel-3')">
+                            <h2 class="accordion-header" ngbAccordionHeader>
+                                <button class="accordion-button collapsed" ngbAccordionButton type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                    aria-controls="collapseFour">
+                                    How much does Perfictus charge for its services?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" ngbAccordionCollapse
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body" ngbAccordionBody>
+                                    <p>The timeline for SEO results can vary depending on factors like the
+                                        competitiveness of your industry, the condition of your website, and the scope
+                                        of the SEO strategy. On average, clients start seeing improvements in 3-6
+                                        months, though some may see faster results depending on specific circumstances.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" ngbAccordionItem [class.active]="activePanel === 'panel-4'"
+                            (shown)="onPanelShown('panel-4')">
+                            <h2 class="accordion-header" ngbAccordionHeader>
+                                <button class="accordion-button collapsed" ngbAccordionButton type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                                    aria-controls="collapseFive">
+                                    How long does it take to see results from Perfictus SEO services?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" ngbAccordionCollapse
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body" ngbAccordionBody>
+                                    <p>The timeline for SEO results can vary depending on factors like the
+                                        competitiveness of your industry, the condition of your website, and the scope
+                                        of the SEO strategy. On average, clients start seeing improvements in 3-6
+                                        months, though some may see faster results depending on specific circumstances.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="research-faq mt-40">
+                    <h3 class="">Everything You Need to Know</h3>
+                    <div class="accordion accordion2" id="accordionExample2" ngbAccordion [closeOthers]="true">
+                        <div class="accordion-item active" ngbAccordionItem [collapsed]="false"
+                            [class.active]="activeAccordion === 'panel-0'" (shown)="onPanelShow('panel-0')">
+                            <h2 class="accordion-header" ngbAccordionHeader>
+                                <button class="accordion-button" ngbAccordionButton type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse2-1" aria-expanded="true"
+                                    aria-controls="collapse2-1">
+                                    How do I get started with Perfictus?
+                                </button>
+                            </h2>
+                            <div id="collapse2-1" class="accordion-collapse collapse show" ngbAccordionCollapse
+                                data-bs-parent="#accordionExample2">
+                                <div class="accordion-body" ngbAccordionBody>
+                                    <p>We provide in-depth monthly reports that detail key performance metrics such as
+                                        traffic, rankings, backlinks, and other SEO KPIs. Our team ensures transparency,
+                                        so you always know how your SEO efforts are progressing.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" ngbAccordionItem [class.active]="activeAccordion === 'panel-1'"
+                            (shown)="onPanelShow('panel-1')">
+                            <h2 class="accordion-header" ngbAccordionHeader>
+                                <button class="accordion-button collapsed" ngbAccordionButton type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse2-2" aria-expanded="false"
+                                    aria-controls="collapse2-2">
+                                    Can Perfictus help with international SEO?
+                                </button>
+                            </h2>
+                            <div id="collapse2-2" class="accordion-collapse collapse" ngbAccordionCollapse
+                                data-bs-parent="#accordionExample2">
+                                <div class="accordion-body" ngbAccordionBody>
+                                    <p>We provide in-depth monthly reports that detail key performance metrics such as
+                                        traffic, rankings, backlinks, and other SEO KPIs. Our team ensures transparency,
+                                        so you always know how your SEO efforts are progressing.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" ngbAccordionItem [class.active]="activeAccordion === 'panel-2'" (shown)="onPanelShow('panel-2')">
+                            <h2 class="accordion-header" ngbAccordionHeader>
+                                <button class="accordion-button collapsed" ngbAccordionButton type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse2-3" aria-expanded="false"
+                                    aria-controls="collapse2-3">
+                                    Does Perfictus work with businesses of all sizes?
+                                </button>
+                            </h2>
+                            <div id="collapse2-3" class="accordion-collapse collapse" ngbAccordionCollapse
+                                data-bs-parent="#accordionExample2">
+                                <div class="accordion-body" ngbAccordionBody>
+                                    <p>We provide in-depth monthly reports that detail key performance metrics such as
+                                        traffic, rankings, backlinks, and other SEO KPIs. Our team ensures transparency,
+                                        so you always know how your SEO efforts are progressing.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" ngbAccordionItem [class.active]="activeAccordion === 'panel-3'" (shown)="onPanelShow('panel-3')">
+                            <h2 class="accordion-header" ngbAccordionHeader>
+                                <button class="accordion-button collapsed" ngbAccordionButton type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse2-4" aria-expanded="false"
+                                    aria-controls="collapse2-4">
+                                    Will Perfictus handle content creation as part of their services?
+                                </button>
+                            </h2>
+                            <div id="collapse2-4" class="accordion-collapse collapse" ngbAccordionCollapse
+                                data-bs-parent="#accordionExample2">
+                                <div class="accordion-body" ngbAccordionBody>
+                                    <p>We provide in-depth monthly reports that detail key performance metrics such as
+                                        traffic, rankings, backlinks, and other SEO KPIs. Our team ensures transparency,
+                                        so you always know how your SEO efforts are progressing.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" ngbAccordionItem [class.active]="activeAccordion === 'panel-4'" (shown)="onPanelShow('panel-4')">
+                            <h2 class="accordion-header" ngbAccordionHeader>
+                                <button class="accordion-button collapsed" ngbAccordionButton type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse2-5" aria-expanded="false"
+                                    aria-controls="collapse2-5">
+                                    What kind of reporting and analytics will I receive from Perfictus?
+                                </button>
+                            </h2>
+                            <div id="collapse2-5" class="accordion-collapse collapse" ngbAccordionCollapse
+                                data-bs-parent="#accordionExample2">
+                                <div class="accordion-body" ngbAccordionBody>
+                                    <p>We provide in-depth monthly reports that detail key performance metrics such as
+                                        traffic, rankings, backlinks, and other SEO KPIs. Our team ensures transparency,
+                                        so you always know how your SEO efforts are progressing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

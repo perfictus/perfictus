@@ -1,0 +1,81 @@
+<div class="about-service7-sec sp">
+  <!--=== ABOUT AREA START === -->
+
+  <div class="about7">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="about7-image image-anime reveal" appGsapReveal>
+            <img src="assets/img/about/about7-image.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="heading7 md:mt-30 sm:mt-30">
+            <span class="sub-title" data-aos="zoom-in-left" data-aos-duration="900"><img
+                src="assets/img/icons/span1.svg" alt=""> ABOUT US</span>
+            <h2 class="text-anime-style-3">Crafting Growth Through Strategic Partnerships </h2>
+            <p class="mt-16" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">We believe in the power
+              of partnerships to drive meaningful results. As a dedicated affiliate marketing agency, our mission is to
+              connect brands with top-tier affiliates to create strategies that deliver measurable success. </p>
+            <p class="mt-16" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">We specialize in crafting
+              performance-based affiliate marketing strategies that deliver measurable results. With a proven track
+              record of creating dynamic partnerships, we help businesses achieve scalable growth while enhancing their
+              online presence.</p>
+            <div class="button mt-30" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+              <a routerLink="/about" class="theme-btn13">
+                Learn More
+                <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i
+                    class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="service7 pt-120 md:pt-50 sm:pt-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="heading7">
+            <span class="sub-title" data-aos="zoom-in-left" data-aos-duration="900"><img
+                src="assets/img/icons/span1.svg" alt=""> OUR SERVICES</span>
+            <h2 class="text-anime-style-3">What We Do</h2>
+            <p class="mt-16" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">We offer a comprehensive
+              range affiliate marketing services designed to help your brand thrive in a competitive landscape. </p>
+            <div class="button mt-30">
+              <a routerLink="/service" class="theme-btn13" data-aos="fade-left" data-aos-duration="800"
+                data-aos-delay="300">
+                View All Services
+                <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i
+                    class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="cs_case_study_1_list md:mt-30 sm:mt-30">
+            @for (item of services; track $index) {
+            <div class="cs_case_study cs_style_1 cs_hover_active" [ngClass]="{'active':$index === 0} " appHoverActive>
+              <a href="javascript:void(0);" class="cs_case_study_thumb cs_bg_filed" [attr.data-src]="item.image"></a>
+              <div class="content-area1">
+                <a href="javascript:void(0);">{{item.title}} </a>
+                <a href="javascript:void(0);" class="cirle-arrow"><i class="fa-regular fa-plus"></i></a>
+              </div>
+              <div class="content-area">
+                <a href="javascript:void(0);">{{item.title}}</a>
+                <p>{{item.description}}</p>
+                <a href="javascript:void(0);" class="learn"><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--=== ABOUT AREA END === -->
+  </div>
+
+</div>

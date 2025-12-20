@@ -1,0 +1,151 @@
+<app-index9-navbar />
+
+<main>
+    <app-index9-hero />
+    <app-index9-about id="about" />
+    <app-index9-choose id="service"/>
+    <app-index9-work id="work"/>
+    <app-index9-shop />
+    <app-index9-testi id="choose"/>
+    <app-index9-insta id="blog"/>
+</main>
+
+
+<footer class="vl-footer-area3">
+    
+
+    <!-- cta area start -->
+    <div class="cta3">
+       <div class="container">
+          <div class="row align-items-center">
+             <div class="col-lg-6">
+                <div class="white-heading sm:mt-30 md:mt-30">
+                   <h2>Ready To Grow Your Business With Perfictus</h2>
+                   <div class="cta3-form">
+                      <input type="email" placeholder="Enter Your Email">
+                      <div class="button">
+                         <button type="submit" class="theme-btn6">Subscribe</button>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <div class="col-lg-6">
+                 <div class="cta3-images">
+                     <div class="image">
+                         <img src="assets/img/others/cta3-image.png" alt="">
+                     </div>
+                     <div class="shape">
+                         <img src="assets/img/shapes/cta3-image-shape.png" alt="">
+                     </div>
+                 </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    <!-- cta area end -->
+ 
+    <div class="space100"></div>
+    <!-- footer area start -->
+    <div class="footer3-bottom-content">
+       <div class="container _relative">
+         <div class="footer3-bg-image">
+             <img src="assets/img/bg/footer3-bg.png" alt="">
+         </div>
+          <div class="row">
+             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="vl-footer-widget-black1 vl-footer1-logo-area mr-50 mb-50">
+                   <div class="vl-footer-logo black-logo">
+                      <a routerLink="/"><img src="assets/img/logo/footer-logo3.png" alt=""></a>
+                   </div>
+                   <div class="vl-footer-text heading1 mt-20">
+                      <p class="mt-16">Perfictus is a results-driven SEO and digital marketing agency dedicated to helping businesses thrive in the digital landscape. </p>
+                   </div>
+                   <div class="vl-footer-social3 text-start mt-30">
+                    @for (item of socialLinks; track $index) {
+                      <a href="javascript:void(0);"><i [class]="item.icon"></i></a>
+                    }
+                   </div>
+                </div>
+             </div>
+             <div class="col-lg-2  col-md-6 col-6">
+                <div class="vl-footer-widget-black1 mb-50 ml-20 md:ml-30 sm:ml-0">
+                   <h4>Quick Links</h4>
+                   <div class="vl-footer-list">
+                      <ul>
+                        @for (item of quickLinks; track $index) {
+                         <li><a [routerLink]="item.url">{{item.name}}</a></li>
+                        }
+                      </ul>
+                   </div>
+                </div>
+             </div>
+ 
+             <div class="col-lg-3 col-md-4 col-6">
+                <div class="vl-footer-widget-black1 mb-50 ml-70 md:ml-0 sm:ml-0">
+                   <h4>Category List</h4>
+                   <div class="vl-footer-list">
+                      <ul>
+                        @for (item of categories; track $index) {
+                         <li><a href="javascript:void(0);">{{item.name}}</a></li>
+                        }
+                      </ul>
+                   </div>
+                </div>
+             </div>
+ 
+             <div class="col-lg-3 col-md-8 col-sm-6">
+                <div class="vl-footer-contact3 vl-footer-widget-black1 mb-50 sm:ml-0 md:ml-0">
+                   <h4>Contact Information</h4>
+                   <div class="single-contact-item">
+                      <div class="icon">
+                         <img src="assets/img/icons/footer-contact-icon1.svg" alt="">
+                      </div>
+                      <div class="text">
+                         <a href="mail:support@perfictus.com">support&#64;perfictus.com</a>
+                      </div>
+                   </div>
+ 
+                   <div class="single-contact-item">
+                      <div class="icon">
+                         <img src="assets/img/icons/footer-contact-icon2.svg" alt="">
+                      </div>
+                      <div class="text">
+                         <a href="javascript:void(0);">123 Digital Lane, <br> Marketing City, USA</a>
+                      </div>
+                   </div>
+ 
+                   <div class="single-contact-item">
+                      <div class="icon">
+                         <img src="assets/img/icons/footer-contact-icon3.svg" alt="">
+                      </div>
+                      <div class="text">
+                         <a href="tel:123-456-7890">123-456-7890</a>
+                      </div>
+                   </div>
+ 
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    <!-- footer area end -->
+ 
+    <!-- copy-right area start -->
+       <div class="container">
+          <div class="row vl-copyright3 _dv-top align-items-center">
+             <div class="col-lg-6">
+                <div class="copyright-text left-side">
+                   <p>ⓒCopyright 2025 Perfictus . All rights reserved</p>
+                </div>
+             </div>
+             <div class="col-lg-6">
+                <div class="copyright-text right-side text-end sm:text-start md:text-start">
+                   <a href="javascript:void(0);">Terms & Conditions</a>
+                   <a href="javascript:void(0);" class="add-before"> Privacy Policy </a>
+                </div>
+             </div>
+          </div>
+       </div>
+    <!-- copy-right area end -->
+ 
+ </footer>

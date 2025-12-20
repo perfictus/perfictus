@@ -1,0 +1,87 @@
+<div class="hero7">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="main-heading7">
+                    <h1 class="text-anime-style-3">Transform Growth with Data-Driven <span class="unic">Affiliate</span>
+                        Marketing</h1>
+                    <p class="mt-16" data-aos="fade-right" data-aos-duration="900">Unlock your brand's potential with
+                        tailored affiliate strategies designed to scale revenue and build impactful partnerships.</p>
+                    <div class="buttons mt-30" data-aos="fade-right" data-aos-duration="1100">
+                        <a routerLink="/about" class="theme-btn13">
+                            Start Your Growth Journey
+                            <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i
+                                    class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                        <div class="video-buttton7 play-btn" appMagnificPopup
+                            href="https://www.youtube.com/watch?v=Y8XpQpW5OVY">
+                            <a id="play-video" class="video-play-button">
+                                <span></span>
+                            </a>
+                            <p>Play Video</p>
+                        </div>
+                    </div>
+                    <div class="review-area-all7" data-aos="fade-right" data-aos-duration="1300">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="award-area">
+                                    <div class="award-image">
+                                        <img src="assets/img/others/hero3-brand1.png" alt="">
+                                    </div>
+                                    <div class="award-content">
+                                        <p>Award Winning Agency</p>
+                                        <h6><span>2500+</span> Active Clients</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="review-on-image sm:mt-20">
+                                    <img src="assets/img/others/hero3-brand2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="review-stars-area sm:mt-20">
+                                    <ul>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                    </ul>
+                                    <p class="stars-text">1300+ Reviews</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero7-images" data-aos="zoom-out" data-aos-duration="900">
+                    <img src="assets/img/hero/hero7-image.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="hero7-brand-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="hero7-slider-heading">
+                    <p>Partners With 100+ Company</p>
+                </div>
+                <owl-carousel-o [options]="owlCarouselConfig" class="hero7-slider">
+                    @for (partner of partners; track $index) {
+                    <ng-template carouselSlide>
+                        <div class="single">
+                            <img [src]="partner" alt="Partner Logo">
+                        </div>
+                    </ng-template>
+                    }
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</div>

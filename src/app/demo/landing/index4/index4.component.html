@@ -1,0 +1,107 @@
+<app-index4-navbar />
+
+<main>
+    <app-index4-hero />
+    <app-index4-brand />
+    <app-index4-about />
+    <app-index4-service />
+    <app-index4-work-process />
+    <app-index4-testimonial />
+    <app-index4-team />
+    <app-index4-blog />
+    <app-index4-cta />
+</main>
+
+<footer class="vl-footer-area8 mt-80">
+
+    <!-- footer area start -->
+    <div class="footer-bottom-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                    <div class="vl-footer-widget-black6 vl-footer1-logo-area mr-50 mb-50">
+                        <div class="vl-footer-logo black-logo">
+                            <a routerLink="/"><img src="assets/img/logo/black-logo.png" alt=""></a>
+                        </div>
+                        <div class="vl-footer-text heading6 mt-20">
+                            <p class="mt-16">Perfictus is a results-driven SEO and digital marketing agency dedicated to
+                                helping businesses thrive in the digital landscape. </p>
+                        </div>
+                        <div class="vl-footer-social6 text-start mt-20 d-flex gap-1">
+                            @for (item of socialLinks; track $index) {
+                            <a href="javascript:void(0);"><i [class]="item.icon"></i></a>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2  col-md-6 col-6">
+                    <div class="vl-footer-widget-black6 mb-50 ml-20 md:ml-30 sm:ml-0">
+                        <h4>Quick Links</h4>
+                        <div class="vl-footer-list">
+                            <ul>
+                                @for (item of quickLinks; track $index) {
+                                <li><a [routerLink]="item.url">{{item.name}}</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="vl-footer-widget-black6 mb-50 ml-70 md:ml-0 sm:ml-0">
+                        <h4>Category List</h4>
+                        <div class="vl-footer-list">
+                            <ul>
+                                <li><a href="javascript:void(0);">Digital Marketing</a></li>
+                                <li><a href="javascript:void(0);">SEO Marketing</a></li>
+                                <li><a href="javascript:void(0);">Startup Agency</a></li>
+                                <li><a href="javascript:void(0);">Advertising Agency</a></li>
+                                <li><a href="javascript:void(0);">Social Media Agency</a></li>
+                                <li><a href="javascript:void(0);">Web Design Agency</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-8 col-sm-6">
+                    <div class="vl-footer-contact8 vl-footer-widget-black6 mb-50 sm:ml-0 md:ml-0">
+                        <h4>Subscribe Newsletter</h4>
+                        <div class="vl-footer-subscribe8">
+                            <form action="#">
+                                <input type="email" placeholder="Email Address">
+                                <div class="button">
+                                    <button type="submit" class="theme-btn14">
+                                        Subscribe
+                                        <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span><span
+                                            class="arrow2"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer area end -->
+
+    <!-- copy-right area start -->
+    <div class="container">
+        <div class="row vl-copyright6 _dv-top align-items-center">
+            <div class="col-lg-6">
+                <div class="copyright-text left-side">
+                    <p>ⓒCopyright {{currentYear}} Perfictus . All rights reserved</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="copyright-text right-side text-end sm:text-start md:text-start">
+                    <a href="javascript:void(0);">Terms & Conditions</a>
+                    <a href="javascript:void(0);" class="add-before"> Privacy Policy </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- copy-right area end -->
+
+</footer>

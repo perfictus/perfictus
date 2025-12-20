@@ -1,0 +1,59 @@
+<div class="work1 sp sec-bg1">
+   <div class="container">
+      <div class="row align-items-center">
+         <div class="col-lg-6">
+            <div class="heading1">
+               <span class="sub-title" data-aos="zoom-in-left" data-aos-duration="900"><img
+                     src="assets/img/icons/span1.svg" alt=""> OUR WORK PROCESS</span>
+               <h2 class="text-anime-style-3">Our Proven Process for Delivering Success</h2>
+            </div>
+         </div>
+         <div class="col-lg-6 text-end sm:text-start md:text-start">
+            <div class="button" data-aos="fade-right" data-aos-duration="900">
+               <a routerLink="/about" class="theme-btn1 mt-30">Get In Touch</a>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-lg-9 m-auto">
+            <div class="work1-slider-all _relative" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+               <ngx-slick-carousel class="work1-slider" [config]="slickConfig">
+                  @for (slide of slides; track $index) {
+                  <div ngxSlickItem class="work1-single-slider">
+                     <div class="images-all">
+                        <div class="shape animate1">
+                           <img [src]="slide.shape" alt="">
+                        </div>
+                        <div class="image">
+                           <img [src]="slide.image" alt="">
+                        </div>
+                     </div>
+                     <div class="content-area heading1">
+                        <div class="num">
+                           <p>{{ slide.id }}</p>
+                        </div>
+                        <h3 class="mt-16">{{ slide.title }}</h3>
+                        <p class="mt-16">{{ slide.description }}</p>
+                        <div class="work1-list">
+                           <ul>
+                              @for (feature of slide.features; track $index) {
+                              <li>
+                                 <span class="check"><i class="fa-solid fa-check"></i></span>{{ feature }}
+                              </li>
+                              }
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  }
+               </ngx-slick-carousel>
+               <div class="work1-slider-btns">
+                  <button class="work1-prev-arrow"><i class="fa-solid fa-angle-left"></i></button>
+                  <button class="work1-next-arrow"><i class="fa-solid fa-angle-right"></i></button>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
