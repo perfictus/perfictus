@@ -150,7 +150,7 @@ export class NavbarsComponent {
       // ]
     },
     {
-      "title": "Shopify Apps ",
+      "title": "Careers ",
       "link": "pricing",
       // "subMenu": [
       //   { "title": "About Us", "link": "about" },
