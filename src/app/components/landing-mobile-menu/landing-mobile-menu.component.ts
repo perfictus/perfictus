@@ -40,7 +40,7 @@ export class LandingMobileMenuComponent {
   menuItems = [
     {
       label: 'Home',
-      icon: 'fa-regular fa-angle-down',
+      // icon: 'fa-regular fa-angle-down',
       children: [
         {
           title: '01. SEO Marketing',
@@ -107,92 +107,59 @@ export class LandingMobileMenuComponent {
   ];
 
   menu: MenuItem[] = [
+    
     {
-      "title": "Portfolio",
-      "link": "#",
-      "icon": 'fa-angle-down',
-      "isOpen": false,
-      "subMenu": [
-        { "title": "Portfolio", "link": "portfolio" },
-        { "title": "Portfolio Details", "link": "portfolio-details" }
-      ]
+      "title": "Services",
+      "link": "service",
+      
     },
     {
-      "title": "Service",
-      "link": "#",
-      "isOpen": false,
-      "icon": 'fa-angle-down',
-      "subMenu": [
-        {
-          "title": "Service",
-          "icon": 'fa-angle-down',
-          "link": "#",
-          "subMenu": [
-            { "title": "Service 01", "link": "service" },
-            { "title": "Service 02", "link": "service2" }
-          ]
-        },
-        {
-          "title": "Single Service",
-          "link": "#",
-          "isOpen": false,
-          "icon": 'fa-angle-down',
-          "subMenu": [
-            { "title": "SEO Marketing", "link": "service-details1" },
-            { "title": "Social Marketing", "link": "service-details2" },
-            { "title": "Content Marketing", "link": "service-details3" },
-            { "title": "Pay Per Click", "link": "service-details4" },
-            { "title": "Travel Guide", "link": "service-details5" },
-            { "title": "HR Staffing Agency", "link": "service-details6" },
-            { "title": "Insurance Policy", "link": "service-details7" },
-            { "title": "Real Estate", "link": "service-details8" },
-            { "title": "Startup Agency", "link": "service-details9" }
-          ]
-        }
-      ]
+      "title": "About Us",
+      "link": "about",
+      
     },
     {
-      "title": "Page's ",
+      "title": "Careers ",
       "link": "#",
       "isOpen": false,
-      "icon": 'fa-angle-down',
-      "subMenu": [
-        { "title": "About Us", "link": "about" },
-        { "title": "Our Team", "link": "team" },
-        { "title": "Testimonial", "link": "testimonial" },
-        { "title": "FAQ's", "link": "faq" },
-        { "title": "Pricing", "link": "pricing" },
-        { "title": "Contact Us", "link": "contact" },
-        { "title": "404", "link": "error" }
-      ]
+      // "icon": 'fa-angle-down',
+      // "subMenu": [
+      //   { "title": "About Us", "link": "about" },
+      //   { "title": "Our Team", "link": "team" },
+      //   { "title": "Testimonial", "link": "testimonial" },
+      //   { "title": "FAQ's", "link": "faq" },
+      //   { "title": "Pricing", "link": "pricing" },
+      //   { "title": "Contact Us", "link": "contact" },
+      //   { "title": "404", "link": "error" }
+      // ]
     },
-    {
-      "title": "Blogs",
-      "link": "#",
-      "isOpen": false,
-      "icon": 'fa-angle-down',
-      "subMenu": [
-        {
-          "title": "Our Blogs",
-          "link": "#",
-          "icon": 'fa-angle-down',
-          "subMenu": [
-            { "title": "Blog 01", "link": "blog" },
-            { "title": "Blog 02", "link": "blog2" }
-          ]
-        },
-        {
-          "title": "Blog Details",
-          "link": "#",
-          "isOpen": false,
-          "icon": 'fa-angle-down',
-          "subMenu": [
-            { "title": "Blog Details Left", "link": "blog-details-left" },
-            { "title": "Blog Details Right", "link": "blog-details-right" },
-            { "title": "Blog Details", "link": "blog-details" }
-          ]
-        }
-      ]
-    }
+    // {
+    //   "title": "Blogs",
+    //   "link": "#",
+    //   "isOpen": false,
+    //   "icon": 'fa-angle-down',
+    //   "subMenu": [
+    //     {
+    //       "title": "Our Blogs",
+    //       "link": "#",
+    //       "icon": 'fa-angle-down',
+    //       "subMenu": [
+    //         { "title": "Blog 01", "link": "blog" },
+    //         { "title": "Blog 02", "link": "blog2" }
+    //       ]
+    //     },
+    //     {
+    //       "title": "Blog Details",
+    //       "link": "#",
+    //       "isOpen": false,
+    //       "icon": 'fa-angle-down',
+    //       "subMenu": [
+    //         { "title": "Blog Details Left", "link": "blog-details-left" },
+    //         { "title": "Blog Details Right", "link": "blog-details-right" },
+    //         { "title": "Blog Details", "link": "blog-details" }
+    //       ]
+    //     }
+    //   ]
+    // }
   ]
 }

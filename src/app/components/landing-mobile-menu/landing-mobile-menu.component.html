@@ -15,11 +15,11 @@
                 <ul>
                     @for (item  of menuItems; track $index) {
                     <li class="has-dropdown" [ngClass]="{ 'active': menuOpen }">
-                        <a href="javascript:void(0);" (click)="toggleMenu()">Home 
-                          <span><i class="fa-regular fa-angle-down"></i></span>
+                        <a routerLink="/index7" (click)="toggleMenu()">Home 
+                          <!-- <span><i class="fa-regular fa-angle-down"></i></span> -->
                         </a>
                       
-                        <div class="vl-mega-menu"  [ngStyle]="{ 'display': menuOpen ? 'block' : 'none' }">
+                        <!-- <div class="vl-mega-menu"  [ngStyle]="{ 'display': menuOpen ? 'block' : 'none' }">
                           <div class="vl-home-menu">
                             <div class="row gx-3 row-cols-1 row-cols-md-1 row-cols-lg-5">
                                 @for (item of item.children; track $index) {
@@ -38,11 +38,11 @@
                               </div>}
                             </div>
                           </div>
-                        </div>
+                        </div> -->
                       
-                        <button class="vl-menu-close" (click)="toggleMenu()">
+                        <!-- <button class="vl-menu-close" (click)="toggleMenu()">
                           <i class="fas fa-chevron-right"></i>
-                        </button>
+                        </button> -->
                       </li>
                     }
                     @for (item of menu; track $index) {
@@ -93,41 +93,58 @@
             <h4 class="black1 text-24 mb-30 leading-24 font-semibold">Contact Us</h4>
             <div class="single-contact flex align-items-center">
                 <div class="text">
-                    <a href="tel:+11234567890"
-                        class="ml-10 gray2 inline-block p-10-0 text-18 leading-18 text _hover1 font-medium">+1 123 456
-                        7890</a>
-                </div>
+
+  <a href="tel:+96560360675" class="phone-link">
+    <img src="assets/img/icons/kuwait_flag.png" alt="Kuwait" class="flag-img">
+    +965-60360675
+  </a><br>
+
+  <a href="tel:+917708621961" class="phone-link">
+    <img src="assets/img/icons/indian_flag.png" alt="India" class="flag-img">
+    +91-7708621961
+  </a>
+
+</div>
+
             </div>
+
+            <!-- <div class="single-contact flex align-items-center mt-6">
+                <div class="text">
+  <a href="javascript:void(0);"
+     class="ml-10 gray2 inline-flex items-center gap-6 p-10-0 text-18 leading-18 _hover1 font-medium">
+     
+    <i class="fa-solid fa-location-dot"></i> &nbsp;&nbsp;
+    Remote
+  </a>
+</div>
+
+            </div> -->
 
             <div class="single-contact flex align-items-center mt-6">
                 <div class="text">
-                    <a href="javascript:void(0);" class="ml-10 gray2 inline-block p-10-0 text-18 leading-18 text _hover1 font-medium">421
-                        Allen, Mexico 4233</a>
-                </div>
+  <a href="mailto:info@perfictus.com"
+     class="ml-10 gray2 inline-flex items-center gap-6 p-10-0 text-18 leading-18 _hover1 font-medium">
+     
+    <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;
+    info&#64;perfictus.com
+  </a>
+</div>
+
             </div>
 
-            <div class="single-contact flex align-items-center mt-6">
-                <div class="text">
-                    <a href="mailto:Hosticconsult@com"
-                        class="ml-10 gray2 inline-block p-10-0 text-18 leading-18 text _hover1 font-medium">Hosticconsult&#64;com</a>
-                </div>
-            </div>
-
-            <div class="single-contact flex align-items-center mt-6">
+            <!-- <div class="single-contact flex align-items-center mt-6">
                 <div class="text">
                     <a href="javascript:void(0);" class="ml-10 gray2 inline-block p-10-0 text-18 leading-18 text _hover1 font-medium">+1
                         123 456 7890</a>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="space20"></div>
         <div class="vl-offcanvas-social">
             <h4 class="black1 text-24 mb-20 mt-20 leading-24 font-semibold">Follow Us</h4>
             <div class="vl-copyright-social2 text-start mt-20">
-                <a href="javascript:void(0);"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="javascript:void(0);"><i class="fa-brands fa-instagram"></i></a>
-                <a href="javascript:void(0);"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="javascript:void(0);"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/perfictus_solutions?igsh=MWUwaG10OGJjeGRneA=="><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/perfictus/"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
 

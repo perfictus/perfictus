@@ -9,5 +9,8 @@ import { RouterLink } from '@angular/router';
   styles: ``
 })
 export class Index7ServiceComponent {
+scrollTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 }
