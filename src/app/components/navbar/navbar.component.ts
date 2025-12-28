@@ -99,16 +99,16 @@ export class NavbarsComponent {
   ];
 
   menu: MenuItem[] = [
+    // {
+    //   "title": "Portfolio",
+    //   "link": "portfolio",
+    //   "subMenu": [
+    //     { "title": "Portfolio", "link": "portfolio" },
+    //     { "title": "Portfolio Details", "link": "portfolio-details" }
+    //   ]
+    // },
     {
-      "title": "Portfolio",
-      "link": "portfolio",
-      // "subMenu": [
-      //   { "title": "Portfolio", "link": "portfolio" },
-      //   { "title": "Portfolio Details", "link": "portfolio-details" }
-      // ]
-    },
-    {
-      "title": "Service",
+      "title": "Services",
       "link": "service",
       // "subMenu": [
       //   {
