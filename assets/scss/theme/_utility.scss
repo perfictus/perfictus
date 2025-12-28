@@ -42,7 +42,7 @@
      position: absolute;
      top: 0;
      left: 0;
-     background-color: var(--vl-color-primary);
+     background-color: var(#beffe5);
      border-radius: inherit;
      opacity: .2
  }
@@ -7847,7 +7847,7 @@
  }
  
  .bg-primary {
-     background-color: var(--vl-color-primary)
+     background-color: var(#beffe5)
  }
  
  .bg-amber-100 {
@@ -8131,7 +8131,7 @@
  }
  
  .text-primary {
-     color: var(--vl-color-primary)
+     color: var(#beffe5)
  }
  
  .text-secondary {
@@ -8543,7 +8543,7 @@
  }
  
  .link-primary a {
-     color: var(--vl-color-primary)
+     color: var(#beffe5)
  }
  
  .link-secondary a {
@@ -8933,7 +8933,7 @@
  }
  
  .border-primary {
-     border-color: var(--vl-color-primary)
+     border-color: var(#beffe5)
  }
  
  .border-white {
@@ -9573,7 +9573,7 @@
  }
  
  .before\:bg-primary:before {
-     background-color: var(--vl-color-primary)
+     background-color: var(#beffe5)
  }
  
  .before\:bg-black:before {
@@ -9585,7 +9585,7 @@
  }
  
  .hover\:text-primary:hover {
-     color: var(--vl-color-primary)
+     color: var(#beffe5)
  }
  
  .hover\:text-secondary:hover {
@@ -9621,7 +9621,7 @@
  }
  
  .hover\:bg-primary:hover {
-     background-color: var(--vl-color-primary)
+     background-color: var(#beffe5)
  }
  
  .hover\:bg-secondary:hover {
@@ -9673,7 +9673,7 @@
  }
  
  .hover\:inner-text-primary:hover .inner-text-primary {
-     color: var(--vl-color-primary)
+     color: var(#beffe5)
  }
  
  .hover\:inner-text-white:hover .inner-text-white {
