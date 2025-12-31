@@ -8,3 +8,44 @@
 
 
 @import "../public/assets/scss/main.scss";
+.mobile-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-link {
+  display: block;
+  padding: 14px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-link:hover {
+  color: #ff4a17;
+}
+
+/* ✅ Contact stacked vertically */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #555;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.flag-img {
+  width: 22px;
+  height: auto;
+}
+
+

@@ -151,7 +151,7 @@ export class NavbarsComponent {
     },
     {
       "title": "Careers ",
-      "link": "pricing",
+      "link": "careers",
       // "subMenu": [
       //   { "title": "About Us", "link": "about" },
       //   { "title": "Our Team", "link": "team" },

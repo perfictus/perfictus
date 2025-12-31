@@ -1,0 +1,129 @@
+<app-breadcrumb [title]="'Careers'" />
+
+
+
+<div class="pricing-faq sp sec-bg2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 m-auto text-center">
+                <div class="heading2">
+                    <span class="sub-title" data-aos="zoom-in-left" data-aos-duration="900">
+                        <img src="assets/img/icons/span3.svg" alt=""> Careers
+                    </span>
+                    <h2 class="text-anime-style-3">Currently Open Positions</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-30">
+            <div class="col-lg-8 m-auto research-faq2">
+                <div class="accordion accordion1" id="accordionExample" ngbAccordion [closeOthers]="true">
+
+                    <!-- Shopify App Developer -->
+                    <div class="accordion-item"
+                         ngbAccordionItem
+                         [class.active]="activeAccordion === 'panel-0'"
+                         (shown)="onPanelShow('panel-0')">
+
+                        <h2 class="accordion-header" ngbAccordionHeader>
+                            <button class="accordion-button collapsed"
+                                    ngbAccordionButton
+                                    type="button">
+                                Shopify App Developer
+                            </button>
+                        </h2>
+
+                        <div ngbAccordionCollapse class="accordion-collapse collapse">
+                            <div class="accordion-body" ngbAccordionBody>
+
+                                <!-- Key Responsibilities -->
+                                <strong style="color:#000;">Key Responsibilities</strong>
+                                <ul style="list-style: disc; padding-left: 20px; margin-top: 10px;">
+                                    <li>Develop custom Shopify apps (public and private)</li>
+                                    <li>Work with Shopify APIs (Admin API, Storefront API, Webhooks)</li>
+                                    <li>Build and maintain frontend interfaces using modern JavaScript frameworks</li>
+                                    <li>Integrate third-party services and payment gateways</li>
+                                    <li>Debug, optimize, and maintain existing Shopify applications</li>
+                                    <li>Ensure app security, performance, and scalability</li>
+                                    <li>Provide technical support and improvements based on business needs</li>
+                                </ul>
+
+                                <hr style="margin: 20px 0;">
+
+                                <!-- Qualifications & Skills -->
+                                <strong style="color:#000;">Qualifications & Skills</strong>
+                                <ul style="list-style: disc; padding-left: 20px; margin-top: 10px;">
+                                    <li>Bachelor’s degree in Computer Science or equivalent experience</li>
+                                    <li>Strong experience with Shopify App Development</li>
+                                    <li>Proficiency in JavaScript, TypeScript, Node.js</li>
+                                    <li>Experience with React, Remix, or Next.js</li>
+                                    <li>Familiarity with REST & GraphQL APIs</li>
+                                    <li>Knowledge of Shopify Polaris and App Bridge (preferred)</li>
+                                    <li>Experience with databases (MySQL, PostgreSQL, or MongoDB)</li>
+                                    <li>Good problem-solving and communication skills</li>
+                                </ul>
+
+                                <a href="mailto:talenthub@perfictus.com?subject=Application for Shopify App Developer"
+                                   class="btn btn-primary mt-3">
+                                    Apply Now
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Graphic Designer -->
+                    <div class="accordion-item"
+                         ngbAccordionItem
+                         [class.active]="activeAccordion === 'panel-1'"
+                         (shown)="onPanelShow('panel-1')">
+
+                        <h2 class="accordion-header" ngbAccordionHeader>
+                            <button class="accordion-button collapsed"
+                                    ngbAccordionButton
+                                    type="button">
+                                Graphic Designer
+                            </button>
+                        </h2>
+
+                        <div ngbAccordionCollapse class="accordion-collapse collapse">
+                            <div class="accordion-body" ngbAccordionBody>
+
+                                <!-- Key Responsibilities -->
+                                <strong style="color:#000;">Key Responsibilities</strong>
+                                <ul style="list-style: disc; padding-left: 20px; margin-top: 10px;">
+                                    <li>Design creative graphics for websites, social media, and ads</li>
+                                    <li>Create banners, posters, brochures, and promotional creatives</li>
+                                    <li>Maintain brand consistency across all designs</li>
+                                    <li>Collaborate with marketing and development teams</li>
+                                    <li>Edit and optimize images for web and mobile platforms</li>
+                                    <li>Work on basic UI elements for websites and apps</li>
+                                </ul>
+
+                                <hr style="margin: 20px 0;">
+
+                                <!-- Qualifications & Skills -->
+                                <strong style="color:#000;">Qualifications & Skills</strong>
+                                <ul style="list-style: disc; padding-left: 20px; margin-top: 10px;">
+                                    <li>Degree or diploma in Graphic Design or related field</li>
+                                    <li>Proficiency in Photoshop, Illustrator, Figma, or Canva</li>
+                                    <li>Strong understanding of typography, color theory, and layouts</li>
+                                    <li>Experience with social media and digital marketing creatives</li>
+                                    <li>Basic UI/UX knowledge is a plus</li>
+                                    <li>Creative mindset with attention to detail</li>
+                                </ul>
+
+                                <a href="mailto:talenthub@perfictus.com?subject=Application for Graphic Designer"
+                                   class="btn btn-primary mt-3">
+                                    Apply Now
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

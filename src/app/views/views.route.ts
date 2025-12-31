@@ -16,7 +16,6 @@ import { AboutUSComponent } from "./pages/about-us/about-us.component";
 import { OurTeamComponent } from "./pages/our-team/our-team.component";
 import { TestimonialComponent } from "./pages/testimonial/testimonial.component";
 import { FAQComponent } from "./pages/faq/faq.component";
-import { PricingComponent } from "./pages/pricing/pricing.component";
 import { ContactUsComponent } from "./pages/contact-us/contact-us.component";
 import { Error404Component } from "./pages/error404/error404.component";
 import { Blog1Component } from "./blogs/ourBlog/blog1/blog1.component";
@@ -24,6 +23,8 @@ import { Blog2Component } from "./blogs/ourBlog/blog2/blog2.component";
 import { BlogDetailLeftComponent } from "./blogs/blogDetail/blog-detail-left/blog-detail-left.component";
 import { BlogDetailRightComponent } from "./blogs/blogDetail/blog-detail-right/blog-detail-right.component";
 import { BlogDetailComponent } from "./blogs/blogDetail/blog-detail/blog-detail.component";
+import { PricingComponent } from "./pages/Pricing/pricing.component";
+import { CareersComponent } from "./pages/careers/careers.component";
 
 export const VIEWS_ROUTE: Route[] = [
     {
@@ -153,5 +154,10 @@ export const VIEWS_ROUTE: Route[] = [
         path: 'blog-details',
         component: BlogDetailComponent,
         data: { title: 'BLog Detail' },
+    },
+    {
+        path: 'careers',
+        component: CareersComponent,
+        data: { title: 'Careers' },
     }
 ]
