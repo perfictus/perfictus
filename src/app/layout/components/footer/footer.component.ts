@@ -8,5 +8,7 @@ import { RouterLink } from '@angular/router';
   styles: ``
 })
 export class FooterComponent {
-
+scrollTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 }
