@@ -24,11 +24,11 @@ export class Index7ChooseComponent {
     },
     { 
       text: 'Perfictus transformed our digital operations!', 
-      imageUrl: 'assets/img/testimonial/tes1-smoll-image1.png' 
+      imageUrl: 'assets/img/testimonial/tes1-smoll-image4.png' 
     },
     { 
       text: 'A partner we trust for long-term growth!', 
-      imageUrl: 'assets/img/testimonial/tes1-smoll-image1.png' 
+      imageUrl: 'assets/img/testimonial/tes1-smoll-image5.png' 
     }
   ];
 
