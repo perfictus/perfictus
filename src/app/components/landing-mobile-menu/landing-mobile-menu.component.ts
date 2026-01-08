@@ -1,11 +1,10 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 interface MenuItem {
   title: string;
   link: string;
-  isOpen?: boolean;
 }
 
 @Component({
@@ -19,27 +18,18 @@ export class LandingMobileMenuComponent {
   @Input() isMenuOpen = false;
   @Output() closeMenuEvent = new EventEmitter<void>();
 
-  closeSidebar() {
+  constructor(private viewportScroller: ViewportScroller) {}
+
+  // 🔥 Scroll to top + close menu
+  onMenuClick() {
+    this.viewportScroller.scrollToPosition([0, 0]);
     this.closeMenuEvent.emit();
   }
 
-  // ✅ Correct routes
   menu: MenuItem[] = [
-    {
-      title: 'Home',
-      link: '/index7'
-    },
-    {
-      title: 'Services',
-      link: '/service'
-    },
-    {
-      title: 'About Us',
-      link: '/about'
-    },
-    {
-      title: 'Careers',
-      link: '/careers'
-    }
+    { title: 'Home', link: '/index7' },
+    { title: 'Services', link: '/service' },
+    { title: 'About Us', link: '/about' },
+    { title: 'Careers', link: '/careers' }
   ];
 }

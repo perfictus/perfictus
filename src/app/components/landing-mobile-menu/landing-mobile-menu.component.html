@@ -6,11 +6,11 @@
     <!-- Header -->
     <div class="vl-offcanvas-header d-flex justify-content-between align-items-center mb-40">
       <div class="vl-offcanvas-logo">
-        <a routerLink="/index7" class="header1-logo-block">
+        <a routerLink="/index7" class="header1-logo-block" (click)="onMenuClick()">
           <img src="assets/img/logo/black-logo.png" alt="Logo">
         </a>
       </div>
-      <button class="vl-offcanvas-close-toggle" (click)="closeSidebar()">
+      <button class="vl-offcanvas-close-toggle" (click)="onMenuClick()">
         <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
@@ -22,7 +22,7 @@
           <li *ngFor="let item of menu">
             <a
               [routerLink]="item.link"
-              (click)="closeSidebar()"
+              (click)="onMenuClick()"
               class="menu-link">
               {{ item.title }}
             </a>
@@ -36,7 +36,6 @@
       <h4 class="black1 text-24 mb-20 font-semibold">Contact Us</h4>
 
       <div class="contact-list">
-
         <a href="tel:+96560360675" class="contact-link">
           <img src="assets/img/icons/kuwait_flag.png" class="flag-img">
           +965-60360675
@@ -51,7 +50,6 @@
           <i class="fa-solid fa-envelope"></i>
           info&#64;perfictus.com
         </a>
-
       </div>
     </div>
 
@@ -71,5 +69,5 @@
 
 <div class="vl-offcanvas-overlay"
      [ngClass]="{ 'vl-offcanvas-overlay-open': isMenuOpen }"
-     (click)="closeSidebar()">
+     (click)="onMenuClick()">
 </div>
