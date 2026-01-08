@@ -159,5 +159,5 @@ export const VIEWS_ROUTE: Route[] = [
         path: 'careers',
         component: CareersComponent,
         data: { title: 'Careers' },
-    }
+    },
 ]

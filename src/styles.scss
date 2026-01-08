@@ -8,6 +8,7 @@
 
 
 @import "../public/assets/scss/main.scss";
+@import 'swiper/css';
 .mobile-menu {
   list-style: none;
   padding: 0;
@@ -48,4 +49,144 @@
   height: auto;
 }
 
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #00b46b;
+  padding: 15px 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll linear infinite;
+  will-change: transform;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-content {
+  display: flex;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 40px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.item-image {
+  width: 50px;          /* Adjust size as needed */
+  height: 50px;
+  margin-right: 15px;
+  object-fit: contain;  /* Keeps aspect ratio */
+}
+
+/* Optional: Pause on hover */
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.showcase-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  padding: 40px 20px;
+  background: #f6f7fb;
+}
+
+.client-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mockup {
+  background: #fff;
+  border-radius: 28px;
+  padding: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.mockup img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 22px;
+  display: block;
+}
+
+.mockup:hover {
+  transform: translateY(-6px);
+}
+
+.client-info {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.client-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.client-info p {
+  font-size: 13px;
+  color: #666;
+}
+
+
+/* Prevent icon color/filter change on active tab */
+.nav-link img {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* Also ensure active nav-link doesn't affect image */
+.nav-link.active img,
+.nav-link:focus img,
+.nav-link:hover img {
+  filter: none !important;
+  opacity: 1 !important;
+}
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 33px;
+  top:480px;
+  width: 56px;
+  height: 56px;
+
+  background-color: #25D366;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  font-size: 30px;
+
+  z-index: 9999;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-icon i {
+  line-height: 1;
+}
+
+.whatsapp-icon:hover {
+  background-color: #1ebe5d;
+}
 
