@@ -27,7 +27,7 @@ export class LandingMobileMenuComponent {
   }
 
   menu: MenuItem[] = [
-    { title: 'Home', link: '/index7' },
+    { title: 'Home', link: '/home' },
     { title: 'Services', link: '/service' },
     { title: 'Portfolio', link: '/portfolio' },
     { title: 'About Us', link: '/about' },
