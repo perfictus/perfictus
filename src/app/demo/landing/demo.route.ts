@@ -46,7 +46,7 @@ export const DEMO_ROUTE: Route[] = [
     {
         path: 'index7',
         component: Index7Component,
-        data: { title: 'Index 7' },
+        data: { title: 'Digital Solutions' },
     },
     {
         path: 'index8',
