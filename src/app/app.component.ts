@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import AOS from 'aos';
 import { TitleService } from './service/title.service';
 
@@ -14,6 +14,7 @@ export class AppComponent {
     public el: ElementRef,
   ) {}
   private titleService = inject(TitleService);
+  private router = inject(Router);
 
   isActive = false;
 
@@ -26,6 +27,18 @@ export class AppComponent {
   ngOnInit() {
 
     this.titleService.init();
+
+    // Open every page at the top without a flicker. Angular's built-in scroll restoration
+    // waits a frame after the new page is drawn, so you briefly see it at the old position.
+    // Jumping on NavigationEnd happens before the browser paints the new page.
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    this.router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd) {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        // let the scroll animations pick up the new page straight away
+        requestAnimationFrame(() => AOS.refreshHard());
+      }
+    });
     AOS.init({ duration: 900, once: true, offset: 60, easing: 'ease-out-cubic' });
   }
 
