@@ -23,8 +23,13 @@
 }
 
 // ---------- Base ----------
+:root { scroll-behavior: auto !important; }  // Bootstrap turns smooth on here
+
 html {
-  scroll-behavior: smooth;
+  // instant jumps so every new page opens at the top (buttons that scroll use smooth JS scrolling)
+  scroll-behavior: auto;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -415,14 +420,24 @@ img {
   width: auto;
 }
 
-// Mobile: hamburger on the left, logo on the right
+// Mobile header: hamburger left, logo centre, Contact Us right
 @media (max-width: 991px) {
-  .pf-burger { order: -1; }
-  .pf-logo { margin-left: auto; }
+  .pf-header .container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 10px;
+  }
+  .pf-burger { order: -1; justify-self: start; }
+  .pf-header .pf-logo { justify-self: center; }
+  .pf-header-cta { justify-self: end; }
 }
 
 @media (max-width: 575px) {
-  .pf-header .pf-logo img { height: 34px; }
+  .pf-header .pf-logo img { height: 26px; }
+}
+
+@media (max-width: 374px) {
+  .pf-header .pf-logo img { height: 22px; }
 }
 
 .pf-nav {
@@ -461,7 +476,17 @@ img {
 
 .pf-header-cta {
   @media (max-width: 991px) {
-    display: none !important;
+    padding: 10px 16px !important;
+    font-size: 13px !important;
+    gap: 6px !important;
+    white-space: nowrap;
+
+    i { display: none; }
+  }
+
+  @media (max-width: 374px) {
+    padding: 9px 12px !important;
+    font-size: 12px !important;
   }
 }
 
@@ -510,12 +535,14 @@ img {
   padding: 110px 28px 40px;
   background: rgba(5, 8, 7, 0.96);
   backdrop-filter: blur(20px);
-  clip-path: circle(0% at calc(100% - 50px) 45px);
+  clip-path: circle(0% at 50px 45px);
+  overscroll-behavior: contain;
+  overflow-y: auto;
   transition: clip-path 0.7s var(--pf-ease);
   pointer-events: none;
 
   &.is-open {
-    clip-path: circle(150% at calc(100% - 50px) 45px);
+    clip-path: circle(150% at 50px 45px);
     pointer-events: auto;
   }
 
@@ -1328,6 +1355,8 @@ img {
 }
 
 .pf-phone {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   --phone-w: 25em;
   position: absolute;
   top: 50%;
@@ -1468,9 +1497,14 @@ img {
   50% { transform: translate(-50%, -53%); }
 }
 
+@media (max-width: 991px) {
+  .pf-app .pf-phones { margin-bottom: 30px; }
+}
+
 @media (max-width: 575px) {
-  .pf-phones { height: 470px; }
-  .pf-phone { font-size: 7.2px; }   // 180px wide
+  .pf-phones { height: 500px; }
+  .pf-phone { font-size: 6.8px; }   // 170px wide
+  .pf-app-head { margin-top: 10px; }
   .pf-phone--0 { transform: translate(-100%, -46%) rotate(-9deg) scale(0.82); }
   .pf-phone--2 { transform: translate(0%, -46%) rotate(9deg) scale(0.82); }
   .pf-app-icon { width: 68px; height: 68px; border-radius: 18px; }

@@ -47,19 +47,6 @@
         </div>
         }
 
-        <div class="pf-project-thumbs">
-            @for (item of projects; track item.name) {
-            <button type="button" [class.is-active]="active === $index" (click)="select($index)"
-                data-aos="fade-up" [attr.data-aos-delay]="$index * 100">
-                @if (item.image) {
-                <img [src]="item.image" [alt]="item.name">
-                } @else {
-                <div class="pf-project-soon pf-project-soon--sm"><img [src]="item.icon" alt="" class="pf-project-soon-flag"><em>Launching soon</em></div>
-                }
-                <span>{{ item.name }}</span>
-            </button>
-            }
-        </div>
     </div>
 </section>
 
