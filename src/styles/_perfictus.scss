@@ -84,9 +84,11 @@ img {
   position: relative;
   min-height: 60vh;
 
+  // Pages appear instantly (already visible) when you navigate - no full-page fade,
+  // which showed a blank screen for a few frames on Android. Sections lower down
+  // still animate in on scroll.
   > *:not(router-outlet) {
     display: block;
-    animation: pf-page-in 0.7s var(--pf-ease) both;
   }
 }
 
@@ -704,7 +706,7 @@ img {
     display: inline-block;
     opacity: 0;
     transform: translateY(60%) rotate(4deg);
-    animation: pf-word-in 1s var(--pf-ease) forwards;
+    animation: pf-word-in 0.8s var(--pf-ease) forwards;
   }
 }
 
@@ -717,7 +719,7 @@ img {
   max-width: 560px;
   margin-top: 28px;
   opacity: 0;
-  animation: pf-page-in 1s var(--pf-ease) 0.7s forwards;
+  animation: pf-page-in 0.8s var(--pf-ease) 0.25s forwards;
 }
 
 .pf-hero-actions {
@@ -726,7 +728,7 @@ img {
   gap: 14px;
   margin-top: 40px;
   opacity: 0;
-  animation: pf-page-in 1s var(--pf-ease) 0.9s forwards;
+  animation: pf-page-in 0.8s var(--pf-ease) 0.35s forwards;
 }
 
 .pf-hero-visual {

@@ -2,15 +2,15 @@
     <div class="pf-grid-bg"></div>
     <div class="pf-blob pf-blob--green"></div>
     <div class="container position-relative">
-        <span class="pf-eyebrow" data-aos="fade-down">{{ eyebrow }}</span>
-        <h1 data-aos="fade-up" data-aos-delay="100">
+        <span class="pf-eyebrow">{{ eyebrow }}</span>
+        <h1>
             {{ title }} @if (highlight) {<span class="pf-gradient-text">{{ highlight }}</span>}
         </h1>
         @if (lead) {
-        <p class="pf-lead mx-auto" data-aos="fade-up" data-aos-delay="200">{{ lead }}</p>
+        <p class="pf-lead mx-auto">{{ lead }}</p>
         }
         <ng-content />
-        <div class="pf-crumbs" data-aos="fade-up" data-aos-delay="300">
+        <div class="pf-crumbs">
             <a routerLink="/home">Home</a>
             <i class="fa-solid fa-chevron-right"></i>
             <span>{{ title }} {{ highlight }}</span>
