@@ -1,0 +1,52 @@
+<section class="pf-hero">
+    <div class="pf-grid-bg"></div>
+    <div class="pf-blob pf-blob--green"></div>
+    <div class="pf-blob pf-blob--lime"></div>
+    <div class="pf-blob pf-blob--teal"></div>
+
+    <div class="container position-relative">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <span class="pf-eyebrow">Shopify Partner &middot; E-commerce Engineering</span>
+                <h1 class="pf-hero-title">
+                    @for (word of titleWords; track $index) {
+                    <span class="pf-word" [class.pf-gradient-text]="$index === 0"
+                        [style.animation-delay]="0.15 + $index * 0.12 + 's'">{{ word }}</span>{{ ' ' }}
+                    }
+                </h1>
+                <p class="pf-hero-text">{{ tagline }}</p>
+                <div class="pf-hero-actions">
+                    <a routerLink="/contact" class="pf-btn">Start a Project <i class="fa-solid fa-arrow-right"></i></a>
+                    <a routerLink="/portfolio" class="pf-btn pf-btn--ghost">View Our Work</a>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="pf-hero-visual" pfTilt [tiltMax]="10" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="pf-orbit"></div>
+                    <div class="pf-orbit pf-orbit--inner"></div>
+                    <div class="pf-hero-logo">
+                        <img src="assets/img/hero/perfictus-logo-hd.png" alt="Perfictus">
+                    </div>
+                    <div>
+                        @for (chip of chips; track chip.label) {
+                        <span class="pf-orbit-chip"><i [class]="chip.icon"></i> {{ chip.label }}</span>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span class="pf-scroll-hint" aria-hidden="true"></span>
+</section>
+
+<div class="pf-marquee">
+    <div class="pf-marquee-track">
+        @for (round of [1, 2]; track round) {
+        @for (service of services; track service.title) {
+        <span class="pf-marquee-item"><i class="fa-solid fa-asterisk"></i> {{ service.title }}</span>
+        }
+        }
+    </div>
+</div>

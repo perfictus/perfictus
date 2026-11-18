@@ -1,0 +1,15 @@
+<section class="pf-section pt-0">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="pf-eyebrow">'Perfictus' Perfection Facts</span>
+        </div>
+        <div class="pf-stats" data-aos="fade-up" data-aos-delay="100">
+            @for (stat of stats; track stat.label) {
+            <div class="pf-stat">
+                <strong class="pf-gradient-text" [pfCountUp]="stat.value" [prefix]="stat.prefix" [suffix]="stat.suffix"></strong>
+                <span>{{ stat.label }}</span>
+            </div>
+            }
+        </div>
+    </div>
+</section>

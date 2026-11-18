@@ -1,174 +1,52 @@
-<div class="service5 sp">
+<section class="pf-section">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="service-page-box mt-30">
-                    <div class="image">
-                        <img src="assets/img/service/service5-image1.png" alt="">
-                    </div>
-                    <div class="content-area">
-                        <div class="num">01</div>
-                        <a routerLink="/service" class="arrow"><i
-                                class="fa-regular fa-arrow-right"></i></a>
-                        <h4><a routerLink="/service">Business Strategy</a></h4>
-                    </div>
+        <div class="pf-section-head is-center">
+            <span class="pf-eyebrow" data-aos="fade-up">Our Services</span>
+            <h2 class="pf-title" data-aos="fade-up" data-aos-delay="100">Who We Are, <span class="pf-gradient-text">What We Do</span></h2>
+        </div>
+
+        <div class="row g-4">
+            @for (service of services; track service.title) {
+            <div class="col-lg-6" data-aos="fade-up" [attr.data-aos-delay]="($index % 2) * 120">
+                <div class="pf-card" pfSpotlight>
+                    <span class="pf-card-num">{{ ($index + 1).toString().padStart(2, '0') }}</span>
+                    <span class="pf-icon"><i [class]="service.icon"></i></span>
+                    <h3>{{ service.title }}</h3>
+                    <p>{{ service.desc }}</p>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-page-box mt-30">
-                    <div class="image">
-                        <img src="assets/img/service/service5-image2.png" alt="">
-                    </div>
-                    <div class="content-area">
-                        <div class="num">02</div>
-                        <a routerLink="/service" class="arrow"><i
-                                class="fa-regular fa-arrow-right"></i></a>
-                        <h4><a routerLink="/service">Business Strategy</a></h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-page-box mt-30">
-                    <div class="image">
-                        <img src="assets/img/service/service5-image3.png" alt="">
-                    </div>
-                    <div class="content-area">
-                        <div class="num">03</div>
-                        <a routerLink="/service" class="arrow"><i
-                                class="fa-regular fa-arrow-right"></i></a>
-                        <h4><a routerLink="/service">Business Strategy</a></h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-page-box mt-30">
-                    <div class="image">
-                        <img src="assets/img/service/service5-image4.png" alt="">
-                    </div>
-                    <div class="content-area">
-                        <div class="num">04</div>
-                        <a routerLink="/service" class="arrow"><i
-                                class="fa-regular fa-arrow-right"></i></a>
-                        <h4><a routerLink="/service">Business Strategy</a></h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-page-box mt-30">
-                    <div class="image">
-                        <img src="assets/img/service/service5-image5.png" alt="">
-                    </div>
-                    <div class="content-area">
-                        <div class="num">05</div>
-                        <a routerLink="/service" class="arrow"><i
-                                class="fa-regular fa-arrow-right"></i></a>
-                        <h4><a routerLink="/service">HR Staffing</a></h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-page-box mt-30">
-                    <div class="image">
-                        <img src="assets/img/service/service5-image6.png" alt="">
-                    </div>
-                    <div class="content-area">
-                        <div class="num">06</div>
-                        <a routerLink="/service" class="arrow"><i
-                                class="fa-regular fa-arrow-right"></i></a>
-                        <h4><a routerLink="/service">Web Design</a></h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-page-box mt-30">
-                    <div class="image">
-                        <img src="assets/img/service/service5-image7.png" alt="">
-                    </div>
-                    <div class="content-area">
-                        <div class="num">07</div>
-                        <a routerLink="/service" class="arrow"><i
-                                class="fa-regular fa-arrow-right"></i></a>
-                        <h4><a routerLink="/service">Real Estate</a></h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-page-box mt-30">
-                    <div class="image">
-                        <img src="assets/img/service/service5-image8.png" alt="">
-                    </div>
-                    <div class="content-area">
-                        <div class="num">08</div>
-                        <a routerLink="/service" class="arrow"><i
-                                class="fa-regular fa-arrow-right"></i></a>
-                        <h4><a routerLink="/service">Advertising </a></h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-page-box mt-30">
-                    <div class="image">
-                        <img src="assets/img/service/service5-image9.png" alt="">
-                    </div>
-                    <div class="content-area">
-                        <div class="num">09</div>
-                        <a routerLink="/service" class="arrow"><i
-                                class="fa-regular fa-arrow-right"></i></a>
-                        <h4><a routerLink="/service">E-commerce </a></h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-page-box mt-30">
-                    <div class="image">
-                        <img src="assets/img/service/service5-image10.png" alt="">
-                    </div>
-                    <div class="content-area">
-                        <div class="num">10</div>
-                        <a routerLink="/service" class="arrow"><i
-                                class="fa-regular fa-arrow-right"></i></a>
-                        <h4><a routerLink="/service">Travel Guide </a></h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-page-box mt-30">
-                    <div class="image">
-                        <img src="assets/img/service/service5-image11.png" alt="">
-                    </div>
-                    <div class="content-area">
-                        <div class="num">11</div>
-                        <a routerLink="/service" class="arrow"><i
-                                class="fa-regular fa-arrow-right"></i></a>
-                        <h4><a routerLink="/service">Insurance </a></h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-page-box mt-30">
-                    <div class="image">
-                        <img src="assets/img/service/service5-image12.png" alt="">
-                    </div>
-                    <div class="content-area">
-                        <div class="num">12</div>
-                        <a routerLink="/service" class="arrow"><i
-                                class="fa-regular fa-arrow-right"></i></a>
-                        <h4><a routerLink="/service">Solar Energy </a></h4>
-                    </div>
-                </div>
-            </div>
-
+            }
         </div>
     </div>
-</div>
+</section>
+
+<section class="pf-section pf-section--alt">
+    <div class="pf-grid-bg"></div>
+    <div class="container">
+        <div class="row align-items-center g-5 mb-5">
+            <div class="col-lg-6">
+                <span class="pf-eyebrow" data-aos="fade-up">Problems We Solve</span>
+                <h2 class="pf-title" data-aos="fade-up" data-aos-delay="100">Transforming Ideas into <span class="pf-gradient-text">Impactful Results</span></h2>
+                <p class="pf-lead" data-aos="fade-up" data-aos-delay="200">At Perfictus, we identify and eliminate the real challenges holding businesses back. From supporting startups and optimizing HR staffing to strengthening digital presence through e-commerce, technology, and marketing solutions, we turn complexity into clarity. Our tailored, execution-focused approach ensures every solution drives efficiency, growth, and long-term business impact.</p>
+            </div>
+            <div class="col-lg-6">
+                <div class="pf-media" pfTilt [tiltMax]="6" data-aos="fade-left">
+                    <img src="assets/img/service/service1-image.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            @for (problem of problems; track problem.title) {
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" [attr.data-aos-delay]="($index % 3) * 120">
+                <div class="pf-card" pfSpotlight>
+                    <span class="pf-card-num">{{ ($index + 1).toString().padStart(2, '0') }}</span>
+                    <span class="pf-icon"><i class="fa-solid fa-bolt"></i></span>
+                    <h3>{{ problem.title }}</h3>
+                    <p>{{ problem.desc }}</p>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

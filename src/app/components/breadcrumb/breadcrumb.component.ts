@@ -8,7 +8,8 @@ import { RouterLink } from '@angular/router';
   styles: ``
 })
 export class BreadcrumbComponent {
-  @Input() breadRouter: string = ''
-  @Input() title: string = ''
-  @Input() subTitle: string = ''
+  @Input() title = '';
+  @Input() highlight = '';
+  @Input() eyebrow = 'Perfection Starts With Us';
+  @Input() lead = '';
 }

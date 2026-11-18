@@ -1,0 +1,55 @@
+<app-breadcrumb title="Join Our" highlight="Team" eyebrow="Careers"
+    lead="We See Perfection, Not Just Degrees" />
+
+<section class="pf-section">
+    <div class="pf-blob pf-blob--green" style="top: 0; right: -300px;"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="pf-section-head is-center">
+                    <span class="pf-eyebrow" data-aos="fade-up">We See Perfection, Not Just Degrees</span>
+                    <h2 class="pf-title" data-aos="fade-up" data-aos-delay="100">Currently Open Positions <span class="pf-gradient-text">(Remote)</span></h2>
+                    <p class="pf-lead" data-aos="fade-up" data-aos-delay="200">We believe talent matters more than degrees. Our team of developers, designers, video editors, UI/UX and interior designers delivers high-performance work that drives business growth.</p>
+                    <p class="mt-4" data-aos="fade-up" data-aos-delay="250">Share your craft with us through the below e-mail ID</p>
+                    <a class="pf-mail-chip" [href]="'mailto:' + email" data-aos="zoom-in" data-aos-delay="300">
+                        {{ email }} <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                @for (job of positions; track job.title) {
+                <div class="pf-acc-item" [class.is-open]="openIndex === $index" data-aos="fade-up" [attr.data-aos-delay]="$index * 120">
+                    <button type="button" class="pf-acc-head" (click)="toggle($index)" [attr.aria-expanded]="openIndex === $index">
+                        <span>
+                            <h3>{{ job.title }}</h3>
+                            <span class="pf-acc-meta"><i class="fa-solid fa-location-dot"></i> Remote</span>
+                        </span>
+                        <span class="pf-acc-toggle"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="pf-acc-body">
+                        <div>
+                            <div class="pf-acc-content">
+                                <div>
+                                    <h4>Key Responsibilities</h4>
+                                    <ul>
+                                        @for (item of job.responsibilities; track item) {
+                                        <li>{{ item }}</li>
+                                        }
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4>Skills</h4>
+                                    <ul>
+                                        @for (item of job.skills; track item) {
+                                        <li>{{ item }}</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

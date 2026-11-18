@@ -1110,7 +1110,7 @@
                           top: -32px;
                           transition: all .4s;
                           width: 100%;
-                          background: var(--vtc-bg-main11);
+                          background: #00b46b;
                           border-radius: 40px;
                           visibility: hidden;
                           opacity: 0;
@@ -1124,7 +1124,7 @@
 
                       }  
                       &.active {
-                          background: var(--vtc-bg-main11);
+                          background: #00b46b;
                           color: var(--vtc-bg-white);
                           &::after {
                               visibility: visible;

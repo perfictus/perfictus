@@ -1,0 +1,46 @@
+<section class="pf-section">
+    <div class="pf-blob pf-blob--green" style="top: 10%; right: -300px;"></div>
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="pf-eyebrow" data-aos="fade-up">Why Choose Us</span>
+                <h2 class="pf-title" data-aos="fade-up" data-aos-delay="100">Your Success, <span class="pf-gradient-text">Our Priority</span></h2>
+                <p class="pf-lead" data-aos="fade-up" data-aos-delay="200">Proven expertise driving e-commerce growth globally, India, and GCC. Expert team fluent in Shopify and integrations. Dedicated partnership ensuring personalized delivery.</p>
+
+                <div class="row g-3 mt-4">
+                    @for (feature of features; track feature.title) {
+                    <div class="col-sm-6" data-aos="fade-up" [attr.data-aos-delay]="200 + $index * 80">
+                        <div class="pf-feature">
+                            <img [src]="feature.image" alt="">
+                            <h4>{{ feature.title }}</h4>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="pf-image-stack" data-aos="fade-left">
+                    <div class="pf-media">
+                        <img src="assets/img/others/choose2-image2.png" alt="">
+                    </div>
+                    <div class="pf-image-stack-small">
+                        <img src="assets/img/others/choose2-image1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="pf-marquee pf-marquee--green">
+    <div class="pf-marquee-track">
+        @for (round of [1, 2]; track round) {
+        @for (item of testimonials; track item.text) {
+        <span class="pf-marquee-item pf-marquee-item--quote">
+            <img [src]="item.image" alt=""> {{ item.text }} <i class="fa-solid fa-asterisk"></i>
+        </span>
+        }
+        }
+    </div>
+</div>
+<div class="pb-5"></div>

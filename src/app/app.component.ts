@@ -26,7 +26,7 @@ export class AppComponent {
   ngOnInit() {
 
     this.titleService.init();
-    AOS.init();
+    AOS.init({ duration: 900, once: true, offset: 60, easing: 'ease-out-cubic' });
   }
 
   @HostListener('window:scroll', [])

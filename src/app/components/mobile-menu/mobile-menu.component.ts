@@ -1,24 +1,21 @@
-import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { ScrollToModule, ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { CONTACT, NAV_LINKS } from '../../data/site-content';
 
 @Component({
   selector: 'app-mobile-menu',
-  imports: [CommonModule,ScrollToModule,RouterLink],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './mobile-menu.component.html',
-  styles: ``,
-  providers:[ScrollToService]
+  styles: ``
 })
 export class MobileMenuComponent {
   @Input() isMenuOpen = false;
   @Output() closeMenuEvent = new EventEmitter<void>();
-  activeLink: string = 'about'
 
-  setActiveLink(link: string): void {
-    this.activeLink = link
-  }
-  closeSidebar() {
+  links = [...NAV_LINKS, { title: 'Contact Us', link: '/contact' }];
+  contact = CONTACT;
+
+  close() {
     this.closeMenuEvent.emit();
   }
 }

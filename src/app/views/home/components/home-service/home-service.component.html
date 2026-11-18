@@ -1,0 +1,28 @@
+<section class="pf-section pf-section--alt">
+    <div class="pf-grid-bg"></div>
+    <div class="container">
+        <div class="pf-section-head">
+            <div>
+                <span class="pf-eyebrow" data-aos="fade-up">Our Services</span>
+                <h2 class="pf-title" data-aos="fade-up" data-aos-delay="100">Who We Are, <span class="pf-gradient-text">What We Do</span></h2>
+                <p class="pf-lead" data-aos="fade-up" data-aos-delay="200">Transform your business with our specialized digital solutions</p>
+            </div>
+            <a routerLink="/service" class="pf-btn pf-btn--ghost" (click)="scrollTop()" data-aos="fade-left">
+                View All Services <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="row g-4">
+            @for (service of services; track service.title) {
+            <div class="col-xl-3 col-md-6" data-aos="fade-up" [attr.data-aos-delay]="($index % 4) * 100">
+                <div class="pf-card" pfSpotlight>
+                    <span class="pf-card-num">{{ ($index + 1).toString().padStart(2, '0') }}</span>
+                    <span class="pf-icon"><i [class]="service.icon"></i></span>
+                    <h3>{{ service.title }}</h3>
+                    <p>{{ service.desc }}</p>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

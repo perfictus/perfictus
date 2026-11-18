@@ -1,4 +1,16 @@
-<app-breadcrumb [title]="'Contact Us'" />
-
+<app-breadcrumb title="Contact" highlight="Us" eyebrow="Get In Touch"
+    lead="Have a project in mind? Grab a free 30-minute call with our team and let's talk it through.">
+    <div class="pf-consult" data-aos="fade-up" data-aos-delay="250">
+        <a [href]="bookingLink" target="_blank" rel="noopener noreferrer" class="pf-btn pf-btn--lg">
+            <i class="fa-regular fa-calendar-check"></i> Book a Free 30-Min Consultation
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <ul class="pf-consult-meta">
+            <li><i class="fa-regular fa-clock"></i> {{ consultation.duration }}</li>
+            <li><i class="fa-solid fa-video"></i> Google Meet</li>
+            <li><i class="fa-regular fa-calendar"></i> {{ consultation.days }}</li>
+            <li><i class="fa-solid fa-business-time"></i> {{ consultation.hours }}</li>
+        </ul>
+    </div>
+</app-breadcrumb>
 <app-contact />
-<app-choose />

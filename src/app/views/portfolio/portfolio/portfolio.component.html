@@ -1,675 +1,147 @@
-<app-breadcrumb [title]="'Our Portfolio'" />
+<app-breadcrumb title="Our" highlight="Portfolio" eyebrow="Perfection in Practice"
+    lead="Delivering Impact Across Industries" />
 
-<div class="blog1 sp bg1 _relative">
+<section class="pf-section">
+    <div class="pf-blob pf-blob--green" style="top: 20%; left: -300px;"></div>
     <div class="container">
-        <div class="row">
-            <div class="row">
-                <div class="col-lg-7 m-auto text-center">
-                    <div class="categories-buttons">
-                        <ul class="nav nav-pills" ngbNav #nav="ngbNav" id="pills-tab" role="tablist">
-                            <li ngbNavItem class="nav-item" role="presentation">
-                                <button ngbNavLink class="nav-link" id="category-tab1-tab" data-bs-toggle="pill"
-                                    data-bs-target="#category-tab1" type="button" role="tab"
-                                    aria-controls="category-tab1" aria-selected="true">All</button>
-                                <ng-template ngbNavContent>
-
-                                    <div class="portfolio-post-area">
-                                        <div class="row mt-30">
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image1.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Development</span>
-                                                        <a routerLink="/portfolio-details">Off Line SEO Marketing</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image2.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>branding</span>
-                                                        <a routerLink="/portfolio-details">SEO Tracking Analysis</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image3.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Marketing</span>
-                                                        <a routerLink="/portfolio-details">Article Data Analysis</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image4.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Design</span>
-                                                        <a routerLink="/portfolio-details">Design System & UI/UX Kit</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image5.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Advertising </span>
-                                                        <a routerLink="/portfolio-details">PPC Campaign Optimization</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image6.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Technology </span>
-                                                        <a routerLink="/portfolio-details">Data Analytics Dashboard</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </ng-template>
-                            </li>
-                            <li ngbNavItem class="nav-item" role="presentation">
-                                <button ngbNavLink class="nav-link" id="category-tab2-tab" data-bs-toggle="pill"
-                                    data-bs-target="#category-tab2" type="button" role="tab"
-                                    aria-controls="category-tab2" aria-selected="false">Branding</button>
-                                <ng-template ngbNavContent>
-                                    <div class="portfolio-post-area">
-                                        <div class="row mt-30">
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image2.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>branding</span>
-                                                        <a routerLink="/portfolio-details">SEO Tracking Analysis</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image3.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Marketing</span>
-                                                        <a routerLink="/portfolio-details">Article Data Analysis</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image4.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Design</span>
-                                                        <a routerLink="/portfolio-details">Design System & UI/UX Kit</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image5.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Advertising </span>
-                                                        <a routerLink="/portfolio-details">PPC Campaign Optimization</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image6.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Technology </span>
-                                                        <a routerLink="/portfolio-details">Data Analytics Dashboard</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image1.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Development</span>
-                                                        <a routerLink="/portfolio-details">Off Line SEO Marketing</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </ng-template>
-                            </li>
-                            <li ngbNavItem class="nav-item" role="presentation">
-                                <button ngbNavLink class="nav-link" id="category-tab3-tab" data-bs-toggle="pill"
-                                    data-bs-target="#category-tab3" type="button" role="tab"
-                                    aria-controls="category-tab3" aria-selected="false">Design</button>
-                                <ng-template ngbNavContent>
-                                    <div class="portfolio-post-area">
-                                        <div class="row mt-30">
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image3.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Marketing</span>
-                                                        <a routerLink="/portfolio-details">Article Data Analysis</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image4.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Design</span>
-                                                        <a routerLink="/portfolio-details">Design System & UI/UX Kit</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image5.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Advertising </span>
-                                                        <a routerLink="/portfolio-details">PPC Campaign Optimization</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image6.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Technology </span>
-                                                        <a routerLink="/portfolio-details">Data Analytics Dashboard</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image1.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Development</span>
-                                                        <a routerLink="/portfolio-details">Off Line SEO Marketing</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image2.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>branding</span>
-                                                        <a routerLink="/portfolio-details">SEO Tracking Analysis</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </ng-template>
-                            </li>
-                            <li ngbNavItem class="nav-item" role="presentation">
-                                <button ngbNavLink class="nav-link" id="category-tab4-tab" data-bs-toggle="pill"
-                                    data-bs-target="#category-tab4" type="button" role="tab"
-                                    aria-controls="category-tab4" aria-selected="false">Development</button>
-                                <ng-template ngbNavContent>
-                                    <div class="portfolio-post-area">
-                                        <div class="row mt-30">
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image1.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Development</span>
-                                                        <a routerLink="/portfolio-details">Off Line SEO Marketing</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image3.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Marketing</span>
-                                                        <a routerLink="/portfolio-details">Article Data Analysis</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image4.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Design</span>
-                                                        <a routerLink="/portfolio-details">Design System & UI/UX Kit</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image5.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Advertising </span>
-                                                        <a routerLink="/portfolio-details">PPC Campaign Optimization</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image6.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Technology </span>
-                                                        <a routerLink="/portfolio-details">Data Analytics Dashboard</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image2.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>branding</span>
-                                                        <a routerLink="/portfolio-details">SEO Tracking Analysis</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                </ng-template>
-                            </li>
-                            <li ngbNavItem class="nav-item" role="presentation">
-                                <button ngbNavLink class="nav-link" id="category-tab5-tab" data-bs-toggle="pill"
-                                    data-bs-target="#category-tab5" type="button" role="tab"
-                                    aria-controls="category-tab5" aria-selected="false">Marketing</button>
-                                <ng-template ngbNavContent>
-
-                                    <div class="portfolio-post-area">
-                                        <div class="row mt-30">
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image3.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Marketing</span>
-                                                        <a routerLink="/portfolio-details">Article Data Analysis</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image1.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Development</span>
-                                                        <a routerLink="/portfolio-details">Off Line SEO Marketing</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image4.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Design</span>
-                                                        <a routerLink="/portfolio-details">Design System & UI/UX Kit</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image5.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Advertising </span>
-                                                        <a routerLink="/portfolio-details">PPC Campaign Optimization</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image6.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Technology </span>
-                                                        <a routerLink="/portfolio-details">Data Analytics Dashboard</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image2.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>branding</span>
-                                                        <a routerLink="/portfolio-details">SEO Tracking Analysis</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </ng-template>
-                            </li>
-                            <li ngbNavItem class="nav-item" role="presentation">
-                                <button ngbNavLink class="nav-link" id="category-tab6-tab" data-bs-toggle="pill"
-                                    data-bs-target="#category-tab6" type="button" role="tab"
-                                    aria-controls="category-tab6" aria-selected="false">Technology</button>
-                                <ng-template ngbNavContent>
-
-                                    <div class="portfolio-post-area">
-                                        <div class="row mt-30">
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image6.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Technology </span>
-                                                        <a routerLink="/portfolio-details">Data Analytics Dashboard</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image3.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Marketing</span>
-                                                        <a routerLink="/portfolio-details">Article Data Analysis</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image1.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Development</span>
-                                                        <a routerLink="/portfolio-details">Off Line SEO Marketing</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image4.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Design</span>
-                                                        <a routerLink="/portfolio-details">Design System & UI/UX Kit</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image5.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>Advertising </span>
-                                                        <a routerLink="/portfolio-details">PPC Campaign Optimization</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="portfolio-box">
-                                                    <div class="image-area">
-                                                        <div class="image">
-                                                            <img src="assets/img/others/portfolio-image2.png" alt="">
-                                                        </div>
-                                                        <a routerLink="/portfolio-details" class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="content-area">
-                                                        <span>branding</span>
-                                                        <a routerLink="/portfolio-details">SEO Tracking Analysis</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </ng-template>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="pf-section-head is-center">
+            <span class="pf-eyebrow" data-aos="fade-up">Perfection in Practice</span>
+            <h2 class="pf-title" data-aos="fade-up" data-aos-delay="100">Delivering Impact <span class="pf-gradient-text">Across Industries</span></h2>
+            <div class="pf-tabs mt-4" role="tablist" data-aos="fade-up" data-aos-delay="200">
+                @for (item of projects; track item.name) {
+                <button type="button" role="tab" [class.is-active]="active === $index"
+                    [attr.aria-selected]="active === $index" (click)="select($index)">
+                    <img [src]="item.icon" alt=""> {{ item.region }}
+                </button>
+                }
             </div>
+        </div>
 
-
-            <div class="col-lg-12">
-                <div [ngbNavOutlet]="nav" class="tab-content categories-content-tab" id="pills-tabContent">
+        @for (item of [project]; track item.name) {
+        <div class="pf-project">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <span class="pf-project-region"><img [src]="item.icon" alt=""> {{ item.region }}</span>
+                    <h3 class="pf-project-name">{{ item.name }}</h3>
+                    <p class="pf-lead">{{ item.desc }}</p>
+                    @if (item.url) {
+                    <a [href]="item.url" target="_blank" rel="noopener noreferrer" class="pf-btn mt-5">
+                        Visit Website <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    }
+                </div>
+                <div class="col-lg-7">
+                    <a [href]="item.url" target="_blank" rel="noopener noreferrer" class="pf-project-image" pfTilt [tiltMax]="5">
+                        @if (item.image) {
+                        <img [src]="item.image" [alt]="item.name">
+                        } @else {
+                        <div class="pf-project-soon">
+                            <img [src]="item.icon" alt="" class="pf-project-soon-flag">
+                            <strong>{{ item.name }}</strong>
+                            <span>Launching soon</span>
+                        </div>
+                        }
+                    </a>
                 </div>
             </div>
         </div>
+        }
+
+        <div class="pf-project-thumbs">
+            @for (item of projects; track item.name) {
+            <button type="button" [class.is-active]="active === $index" (click)="select($index)"
+                data-aos="fade-up" [attr.data-aos-delay]="$index * 100">
+                @if (item.image) {
+                <img [src]="item.image" [alt]="item.name">
+                } @else {
+                <div class="pf-project-soon pf-project-soon--sm"><img [src]="item.icon" alt="" class="pf-project-soon-flag"><em>Launching soon</em></div>
+                }
+                <span>{{ item.name }}</span>
+            </button>
+            }
+        </div>
     </div>
-</div>
+</section>
+
+<section class="pf-section pf-section--alt pf-apps">
+    <div class="pf-blob pf-blob--teal" style="top: 10%; right: -300px;"></div>
+    <div class="container">
+        <div class="pf-section-head is-center">
+            <span class="pf-eyebrow" data-aos="fade-up">Beyond the Web</span>
+            <h2 class="pf-title" data-aos="fade-up" data-aos-delay="100">Mobile <span class="pf-gradient-text">App Development</span></h2>
+            <p class="pf-lead" data-aos="fade-up" data-aos-delay="200">Native-feel shopping apps for iOS and Android, built to take your store into your customers' pockets.</p>
+        </div>
+
+        @for (app of apps; track app.name) {
+        <div class="pf-app">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
+                    <div class="pf-app-head">
+                        <img [src]="app.icon" [alt]="app.name + ' icon'" class="pf-app-icon">
+                        <div>
+                            <span class="pf-project-region"><img [src]="app.flag" alt=""> {{ app.region }} · {{ app.category }}</span>
+                            <h3 class="pf-app-name">{{ app.name }}</h3>
+                        </div>
+                    </div>
+
+                    <div class="pf-app-platforms">
+                        @for (p of app.platforms; track p) {
+                        <span><i [class]="p === 'iOS' ? 'fa-brands fa-apple' : 'fa-brands fa-android'"></i> {{ p }}</span>
+                        }
+                    </div>
+
+                    <p class="pf-lead">{{ app.desc }}</p>
+
+                    <ul class="pf-checklist">
+                        @for (f of app.features; track f) {
+                        <li><i class="fa-solid fa-check"></i> {{ f }}</li>
+                        }
+                    </ul>
+
+                    <div class="pf-store-btns">
+                        @if (app.appStore) {
+                        <a [href]="app.appStore" target="_blank" rel="noopener noreferrer" class="pf-store-btn">
+                            <i class="fa-brands fa-apple"></i>
+                            <span><small>Download on the</small>App Store</span>
+                        </a>
+                        }
+                        @if (app.playStore) {
+                        <a [href]="app.playStore" target="_blank" rel="noopener noreferrer" class="pf-store-btn">
+                            <i class="fa-brands fa-google-play"></i>
+                            <span><small>Get it on</small>Play Store</span>
+                        </a>
+                        }
+                    </div>
+                </div>
+
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <div class="pf-phones" data-aos="zoom-in">
+                        <div class="pf-phones-glow"></div>
+                        @for (shot of app.screens; track shot) {
+                        <div [class]="'pf-phone pf-phone--' + $index">
+                            <span class="pf-phone-btn pf-phone-btn--action"></span>
+                            <span class="pf-phone-btn pf-phone-btn--vol-up"></span>
+                            <span class="pf-phone-btn pf-phone-btn--vol-down"></span>
+                            <span class="pf-phone-btn pf-phone-btn--power"></span>
+                            <div class="pf-phone-screen">
+                                <div class="pf-phone-status">
+                                    <span class="pf-phone-time">9:41</span>
+                                    <span class="pf-phone-island"></span>
+                                    <span class="pf-phone-icons">
+                                        <i class="fa-solid fa-signal"></i>
+                                        <i class="fa-solid fa-wifi"></i>
+                                        <i class="fa-solid fa-battery-full"></i>
+                                    </span>
+                                </div>
+                                <img [src]="shot" [alt]="app.name + ' screen ' + ($index + 1)" loading="lazy">
+                                <span class="pf-phone-home"></span>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</section>
