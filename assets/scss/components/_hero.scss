@@ -240,10 +240,7 @@
 
     .image1 {
       position: absolute;
-      bottom: 0;
-      left: -50%;
-      right: -50%;
-      top: -66px;
+      inset: -66px -50% 0;
     }
     .apps-image {
       position: relative;
