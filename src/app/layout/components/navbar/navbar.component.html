@@ -14,6 +14,11 @@
             Contact Us <i class="fa-solid fa-arrow-right"></i>
         </a>
 
+        <a routerLink="/contact" routerLinkActive="is-active" class="pf-contact-icon" aria-label="Contact us"
+            (click)="closeMenu(false)">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+
         <button type="button" class="pf-burger" [class.is-open]="isMenuOpen" (click)="toggleMenu()"
             [attr.aria-expanded]="isMenuOpen" aria-label="Open menu">
             <span></span><span></span><span></span>

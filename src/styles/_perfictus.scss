@@ -429,15 +429,14 @@ img {
   }
   .pf-burger { order: -1; justify-self: start; }
   .pf-header .pf-logo { justify-self: center; }
-  .pf-header-cta { justify-self: end; }
 }
 
 @media (max-width: 575px) {
-  .pf-header .pf-logo img { height: 26px; }
+  .pf-header .pf-logo img { height: 32px; }
 }
 
 @media (max-width: 374px) {
-  .pf-header .pf-logo img { height: 22px; }
+  .pf-header .pf-logo img { height: 28px; }
 }
 
 .pf-nav {
@@ -476,27 +475,50 @@ img {
 
 .pf-header-cta {
   @media (max-width: 991px) {
-    padding: 10px 16px !important;
-    font-size: 13px !important;
-    gap: 6px !important;
-    white-space: nowrap;
-
-    i { display: none; }
-  }
-
-  @media (max-width: 374px) {
-    padding: 9px 12px !important;
-    font-size: 12px !important;
+    display: none !important;
   }
 }
 
-.pf-burger {
+// Mobile: glass icon button linking to Contact (matches the menu button)
+.pf-contact-icon {
+  @extend %pf-glass-btn;
   display: none;
+  place-items: center;
+  color: var(--pf-green-bright);
+  font-size: 18px;
+
+  &:hover,
+  &.is-active { color: var(--pf-green-bright); border-color: rgba(34, 232, 142, 0.55); }
+
+  @media (max-width: 991px) {
+    display: grid;
+    justify-self: end;
+  }
+}
+
+// Liquid-glass square buttons used in the mobile header
+%pf-glass-btn {
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  border: 1px solid var(--pf-border-strong);
-  background: var(--pf-surface);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.03) 55%),
+    rgba(18, 24, 22, 0.55);
+  -webkit-backdrop-filter: blur(16px) saturate(170%);
+  backdrop-filter: blur(16px) saturate(170%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.35),
+    0 8px 22px -10px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s var(--pf-ease), border-color 0.3s;
+
+  &:active { transform: scale(0.94); }
+}
+
+.pf-burger {
+  @extend %pf-glass-btn;
+  display: none;
   position: relative;
 
   span {
@@ -1338,12 +1360,18 @@ img {
   }
 }
 
-// Three fanned iPhone mockups (sizes in em so the whole phone scales from one font-size)
+// Three fanned iPhone mockups (sizes in em so the whole phone scales from one font-size).
+// The middle phone sits in the normal page flow, so the block is always exactly as tall as
+// the phone on every browser (iPhone Safari included); the side phones are placed around it.
 .pf-phones {
+  --pf-phone-fs: 10px;              // 25em = 250px wide phone
   position: relative;
-  height: 640px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 580px;
   margin: 0 auto;
+  padding: 30px 0 40px;              // room for the float + the tilted side phones
 }
 
 .pf-phones-glow {
@@ -1362,7 +1390,7 @@ img {
   top: 50%;
   left: 50%;
   width: var(--phone-w);
-  font-size: 10px;               // 25em = 250px wide
+  font-size: var(--pf-phone-fs);
   padding: 0.55em;               // titanium frame thickness
   border-radius: 4.6em;
   // black titanium frame with a brushed highlight
@@ -1375,9 +1403,13 @@ img {
     0 0 0 0.06em rgba(0, 0, 0, 0.6);
   transition: transform 0.6s var(--pf-ease);
 
+  // middle phone: in the page flow, sets the block's height
   &--1 {
+    position: relative;
+    top: auto;
+    left: auto;
     z-index: 3;
-    transform: translate(-50%, -50%);
+    flex-shrink: 0;
     animation: pf-phone-float 6s ease-in-out infinite;
   }
 
@@ -1493,17 +1525,22 @@ img {
 }
 
 @keyframes pf-phone-float {
-  0%, 100% { transform: translate(-50%, -50%); }
-  50% { transform: translate(-50%, -53%); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+// small laptops: slightly smaller phones so the side ones stay on screen
+@media (min-width: 992px) and (max-width: 1199px) {
+  .pf-phones { --pf-phone-fs: 8.6px; }
 }
 
 @media (max-width: 991px) {
-  .pf-app .pf-phones { margin-bottom: 30px; }
+  .pf-app .pf-phones { margin-bottom: 0; }
 }
 
 @media (max-width: 575px) {
-  .pf-phones { height: 500px; }
-  .pf-phone { font-size: 6.8px; }   // 170px wide
+  // phone width follows the screen: about 44% of the viewport, never wider than 170px
+  .pf-phones { --pf-phone-fs: min(6.8px, 1.75vw); padding: 24px 0 32px; }
   .pf-app-head { margin-top: 10px; }
   .pf-phone--0 { transform: translate(-100%, -46%) rotate(-9deg) scale(0.82); }
   .pf-phone--2 { transform: translate(0%, -46%) rotate(9deg) scale(0.82); }
