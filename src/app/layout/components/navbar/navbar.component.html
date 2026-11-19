@@ -26,4 +26,4 @@
     </div>
 </header>
 
-<app-mobile-menu [isMenuOpen]="isMenuOpen" (closeMenuEvent)="closeMenu()" />
+<app-mobile-menu [isMenuOpen]="isMenuOpen" (closeMenuEvent)="closeMenu(!$event)" />

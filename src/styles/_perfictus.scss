@@ -557,17 +557,30 @@ img {
   flex-direction: column;
   justify-content: space-between;
   padding: 110px 28px 40px;
-  background: rgba(5, 8, 7, 0.96);
-  backdrop-filter: blur(20px);
-  clip-path: circle(0% at 50px 45px);
+  // solid background (no backdrop blur) so Android phones can animate it smoothly
+  background: linear-gradient(180deg, rgba(8, 20, 14, 0.99), rgba(5, 8, 7, 0.99));
   overscroll-behavior: contain;
   overflow-y: auto;
-  transition: clip-path 0.7s var(--pf-ease);
+  scrollbar-width: none;            // no scrollbar line inside the menu
+  &::-webkit-scrollbar { display: none; }
+
+  // quick, GPU-friendly fade (replaces the expanding-circle reveal)
+  opacity: 0;
+  visibility: hidden;
   pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0s linear 0.25s;
 
   &.is-open {
-    clip-path: circle(150% at 50px 45px);
+    opacity: 1;
+    visibility: visible;
     pointer-events: auto;
+    transition: opacity 0.25s ease, visibility 0s;
+  }
+
+  // tapping a link closes the menu instantly so the new page shows cleanly
+  &.is-instant,
+  &.is-instant * {
+    transition: none !important;
   }
 
   ul {
@@ -578,8 +591,8 @@ img {
 
   li {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.5s var(--pf-ease), transform 0.5s var(--pf-ease);
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.3s var(--pf-ease);
   }
 
   &.is-open li {
@@ -587,7 +600,7 @@ img {
     transform: none;
 
     @for $i from 1 through 8 {
-      &:nth-child(#{$i}) { transition-delay: #{0.12 + $i * 0.06}s; }
+      &:nth-child(#{$i}) { transition-delay: #{$i * 0.025}s; }
     }
   }
 

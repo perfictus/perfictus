@@ -1,8 +1,8 @@
-<div class="pf-mmenu" [class.is-open]="isMenuOpen" [attr.aria-hidden]="!isMenuOpen">
+<div class="pf-mmenu" [class.is-open]="isMenuOpen" [class.is-instant]="instant" [attr.aria-hidden]="!isMenuOpen">
     <ul>
         @for (item of links; track item.link) {
         <li>
-            <a class="pf-mmenu-link" [routerLink]="item.link" routerLinkActive="is-active" (click)="close()">
+            <a class="pf-mmenu-link" [routerLink]="item.link" routerLinkActive="is-active" (click)="navigate()">
                 {{ item.title }} <i class="fa-solid fa-arrow-right"></i>
             </a>
         </li>
