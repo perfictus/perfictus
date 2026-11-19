@@ -1,4 +1,5 @@
-import { AfterViewInit, Directive, ElementRef, Input, OnDestroy } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, Input, OnDestroy, PLATFORM_ID, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 // Counts from 0 to the target the first time the element scrolls into view.
 @Directive({
@@ -12,9 +13,16 @@ export class CountUpDirective implements AfterViewInit, OnDestroy {
 
   private observer?: IntersectionObserver;
 
+  private isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+
   constructor(private el: ElementRef<HTMLElement>) {}
 
   ngAfterViewInit() {
+    // Pre-rendered HTML (what search engines read) shows the real number
+    if (!this.isBrowser) {
+      this.render(this.target);
+      return;
+    }
     this.render(0);
     this.observer = new IntersectionObserver((entries) => {
       if (entries.some((e) => e.isIntersecting)) {

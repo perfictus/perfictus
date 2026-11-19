@@ -242,10 +242,25 @@
   dependencies:
     tslib "^2.3.0"
 
+"@angular/platform-server@^19.2.5":
+  version "19.2.5"
+  resolved "https://registry.npmjs.org/@angular/platform-server/-/platform-server-19.2.5.tgz"
+  integrity sha512-F23ph7vPobssJ5oil2qkPwRTKw7KaNqAORu3Y7pUAAn+K+KMO8v/wzGMcOdln/BjTSCR/FjOnZv8k8lpju/9iw==
+  dependencies:
+    tslib "^2.3.0"
+    xhr2 "^0.2.0"
+
 "@angular/router@^19.0.6":
   version "19.2.5"
   resolved "https://registry.npmjs.org/@angular/router/-/router-19.2.5.tgz"
   integrity sha512-9pSfmdNXLjaOKj0kd4UxBC7sFdCFOnRGbftp397G3KWqsLsGSKmNFzqhXNeA5QHkaVxnpmpm8HzXU+zYV5JwSg==
+  dependencies:
+    tslib "^2.3.0"
+
+"@angular/ssr@^19.2.6":
+  version "19.2.6"
+  resolved "https://registry.npmjs.org/@angular/ssr/-/ssr-19.2.6.tgz"
+  integrity sha512-iaALhm8YMpWzZa7ukHEZrVSc9HjldQGnXOcB3DJkZiB5wyjet+mgbIR2CNJgw32CKoCBgFJPfkbX88HMtPPBWQ==
   dependencies:
     tslib "^2.3.0"
 
@@ -6470,6 +6485,11 @@ ws@~8.17.1:
   version "8.17.1"
   resolved "https://registry.npmjs.org/ws/-/ws-8.17.1.tgz"
   integrity sha512-6XQFvXTkbfUOZOKKILFG1PDK2NDQs4azKQl26T0YS5CxqWLgXajbPZ+h4gZekJyRqFU8pvnbAbbs/3TgRPy+GQ==
+
+xhr2@^0.2.0:
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/xhr2/-/xhr2-0.2.1.tgz"
+  integrity sha512-sID0rrVCqkVNUn8t6xuv9+6FViXjUVXq8H5rWOH2rz9fDNQEd4g0EA2XlcEdJXRz5BMEn4O1pJFdT+z4YHhoWw==
 
 y18n@^5.0.5:
   version "5.0.8"

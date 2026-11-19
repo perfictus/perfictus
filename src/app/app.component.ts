@@ -1,7 +1,8 @@
-import { Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, inject, PLATFORM_ID, ViewChild } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import AOS from 'aos';
-import { TitleService } from './service/title.service';
+import { SeoService } from './service/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ export class AppComponent {
   constructor(
     public el: ElementRef,
   ) {}
-  private titleService = inject(TitleService);
+  private seo = inject(SeoService);
+  private isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
   private router = inject(Router);
 
   isActive = false;
@@ -26,7 +28,10 @@ export class AppComponent {
   duration = 550;
   ngOnInit() {
 
-    this.titleService.init();
+    this.seo.init();
+
+    // Everything below needs a real browser (skipped while pre-rendering pages)
+    if (!this.isBrowser) return;
 
     // Open every page at the top without a flicker. Angular's built-in scroll restoration
     // waits a frame after the new page is drawn, so you briefly see it at the old position.

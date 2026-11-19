@@ -1,13 +1,9 @@
 import { Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { Error404Component } from './views/pages/error404/error404.component';
+import { SEO } from './data/seo';
 
 export const routes: Routes = [
-    {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full',
-    },
     {
         path: '',
         component: LayoutComponent,
@@ -17,7 +13,6 @@ export const routes: Routes = [
     {
         path: '**',
         component: LayoutComponent,
-        children: [{ path: '', component: Error404Component, data: { title: 'Error' } }],
+        children: [{ path: '', component: Error404Component, data: SEO.notFound }],
     },
-
 ];

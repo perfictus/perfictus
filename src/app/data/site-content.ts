@@ -43,7 +43,7 @@ export const CONSULTATION = {
 };
 
 export const NAV_LINKS = [
-  { title: 'Home', link: '/home' },
+  { title: 'Home', link: '/' },
   { title: 'Services', link: '/service' },
   { title: 'Portfolio', link: '/portfolio' },
   { title: 'About Us', link: '/about' },

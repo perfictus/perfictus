@@ -11,7 +11,7 @@
                     @for (feature of features; track feature.title) {
                     <div class="col-sm-6" data-aos="fade-up" [attr.data-aos-delay]="200 + $index * 80">
                         <div class="pf-feature">
-                            <img [src]="feature.image" alt="">
+                            <img [src]="feature.image" [alt]="feature.title + ' icon'">
                             <h4>{{ feature.title }}</h4>
                         </div>
                     </div>
@@ -21,10 +21,10 @@
             <div class="col-lg-6">
                 <div class="pf-image-stack" data-aos="fade-left">
                     <div class="pf-media">
-                        <img src="assets/img/others/choose2-image2.png" alt="">
+                        <img src="assets/img/others/choose2-image2.png" alt="Perfictus team planning an e-commerce growth strategy">
                     </div>
                     <div class="pf-image-stack-small">
-                        <img src="assets/img/others/choose2-image1.png" alt="">
+                        <img src="assets/img/others/choose2-image1.png" alt="Shopify store performance and revenue growth">
                     </div>
                 </div>
             </div>

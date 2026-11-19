@@ -2,7 +2,7 @@
     <ul>
         @for (item of links; track item.link) {
         <li>
-            <a class="pf-mmenu-link" [routerLink]="item.link" routerLinkActive="is-active" (click)="navigate()">
+            <a class="pf-mmenu-link" [routerLink]="item.link" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: item.link === '/' }" (click)="navigate()">
                 {{ item.title }} <i class="fa-solid fa-arrow-right"></i>
             </a>
         </li>

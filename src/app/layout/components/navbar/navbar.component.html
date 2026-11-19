@@ -1,12 +1,12 @@
 <header class="pf-header" [class.is-scrolled]="isSticky || isMenuOpen">
     <div class="container">
-        <a routerLink="/home" class="pf-logo" (click)="scrollTop(); closeMenu()">
+        <a routerLink="/" class="pf-logo" (click)="scrollTop(); closeMenu()">
             <img src="assets/img/logo/perfictus-white.png" alt="Perfictus">
         </a>
 
         <ul class="pf-nav">
             @for (item of links; track item.link) {
-            <li><a [routerLink]="item.link" routerLinkActive="is-active">{{ item.title }}</a></li>
+            <li><a [routerLink]="item.link" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: item.link === '/' }">{{ item.title }}</a></li>
             }
         </ul>
 

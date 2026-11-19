@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "latest": "yarn upgrade-interactive --latest",
-    "format": "prettier --write ./src"
+    "format": "prettier --write ./src",
+    "build:pages": "ng build && node scripts/prepare-gh-pages.mjs"
   },
   "private": true,
   "dependencies": {
@@ -19,7 +20,9 @@
     "@angular/forms": "^19.0.6",
     "@angular/platform-browser": "^19.0.6",
     "@angular/platform-browser-dynamic": "^19.0.6",
+    "@angular/platform-server": "^19.2.5",
     "@angular/router": "^19.0.6",
+    "@angular/ssr": "^19.2.6",
     "@ng-bootstrap/ng-bootstrap": "^18.0.0",
     "@ng-select/ng-select": "^14.2.6",
     "@nicky-lenaers/ngx-scroll-to": "^14.0.0",
