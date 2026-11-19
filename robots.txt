@@ -1,0 +1,6 @@
+# https://perfictus.com/robots.txt
+User-agent: *
+Allow: /
+Disallow: /error
+
+Sitemap: https://perfictus.com/sitemap.xml
