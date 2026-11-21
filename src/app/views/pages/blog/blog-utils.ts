@@ -1,10 +1,26 @@
 import { BlogBlock, BlogPost } from '../../../data/blog';
 
-export interface TextPart { text: string; bold: boolean; }
+export interface TextPart { text: string; bold: boolean; link?: string; }
 export interface ViewBlock { kind: 'h2' | 'h3' | 'p' | 'ul' | 'ol' | 'tip'; parts?: TextPart[]; items?: TextPart[][]; }
 
-/** "Hello **world**" -> [{text:'Hello ', bold:false}, {text:'world', bold:true}] */
+/**
+ * "Hello **world**" -> [{text:'Hello ', bold:false}, {text:'world', bold:true}]
+ * Internal links use Markdown style: "see our [Shopify services](/shopify-development)".
+ */
 export function parts(text: string): TextPart[] {
+  const out: TextPart[] = [];
+  const linkRe = /\[([^\]]+)\]\((\/[^)\s]*)\)/g;
+  let last = 0;
+  for (const m of text.matchAll(linkRe)) {
+    out.push(...boldParts(text.slice(last, m.index)));
+    out.push({ text: m[1], bold: false, link: m[2] });
+    last = m.index! + m[0].length;
+  }
+  out.push(...boldParts(text.slice(last)));
+  return out;
+}
+
+function boldParts(text: string): TextPart[] {
   return text.split('**').map((t, i) => ({ text: t, bold: i % 2 === 1 })).filter((p) => p.text);
 }
 

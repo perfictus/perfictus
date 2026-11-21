@@ -1,0 +1,52 @@
+# Builds the site and publishes it to the gh-pages branch (GitHub Pages → perfictus.com).
+#
+# Runs:
+#  - on every push to main (publish changes right away)
+#  - every day at 06:00 India time, so blog posts scheduled for that date go live automatically
+#  - manually from the Actions tab ("Run workflow")
+name: Build & deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '30 0 * * *' # 00:30 UTC = 06:00 IST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build (pre-render pages, sitemap, RSS, llms.txt)
+        run: npm run build:pages
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist/browser
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Deploy ${{ github.sha }} (${{ github.event_name }})'
+
+      - name: Notify Bing/IndexNow about posts published today
+        run: node scripts/indexnow.mjs
+        continue-on-error: true

@@ -9,7 +9,7 @@
     "test": "ng test",
     "latest": "yarn upgrade-interactive --latest",
     "format": "prettier --write ./src",
-    "build:pages": "ng build && node scripts/prepare-gh-pages.mjs"
+    "build:pages": "ng build && node scripts/prepare-gh-pages.mjs && node scripts/seo-files.mjs"
   },
   "private": true,
   "dependencies": {

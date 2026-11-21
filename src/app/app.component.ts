@@ -3,10 +3,12 @@ import { isPlatformBrowser } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import AOS from 'aos';
 import { SeoService } from './service/seo.service';
+import { ConsentService } from './service/consent.service';
+import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CookieBannerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
@@ -17,6 +19,7 @@ export class AppComponent {
   private seo = inject(SeoService);
   private isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
   private router = inject(Router);
+  private consent = inject(ConsentService);
 
   isActive = false;
 
@@ -44,6 +47,7 @@ export class AppComponent {
         requestAnimationFrame(() => AOS.refreshHard());
       }
     });
+    this.consent.init();
     AOS.init({ duration: 900, once: true, offset: 60, easing: 'ease-out-cubic' });
   }
 

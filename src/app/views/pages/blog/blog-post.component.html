@@ -30,30 +30,30 @@
             @for (block of blocks; track $index) {
             @switch (block.kind) {
             @case ('h2') {
-            <h2>@for (part of block.parts; track $index) {@if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</h2>
+            <h2>@for (part of block.parts; track $index) {@if (part.link) {<a [routerLink]="part.link">{{ part.text }}</a>} @else if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</h2>
             }
             @case ('h3') {
-            <h3>@for (part of block.parts; track $index) {@if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</h3>
+            <h3>@for (part of block.parts; track $index) {@if (part.link) {<a [routerLink]="part.link">{{ part.text }}</a>} @else if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</h3>
             }
             @case ('p') {
-            <p>@for (part of block.parts; track $index) {@if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</p>
+            <p>@for (part of block.parts; track $index) {@if (part.link) {<a [routerLink]="part.link">{{ part.text }}</a>} @else if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</p>
             }
             @case ('tip') {
             <aside class="pf-article-tip"><i class="fa-solid fa-lightbulb"></i>
-                <p>@for (part of block.parts; track $index) {@if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</p>
+                <p>@for (part of block.parts; track $index) {@if (part.link) {<a [routerLink]="part.link">{{ part.text }}</a>} @else if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</p>
             </aside>
             }
             @case ('ul') {
             <ul>
                 @for (item of block.items; track $index) {
-                <li>@for (part of item; track $index) {@if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</li>
+                <li>@for (part of item; track $index) {@if (part.link) {<a [routerLink]="part.link">{{ part.text }}</a>} @else if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</li>
                 }
             </ul>
             }
             @case ('ol') {
             <ol>
                 @for (item of block.items; track $index) {
-                <li>@for (part of item; track $index) {@if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</li>
+                <li>@for (part of item; track $index) {@if (part.link) {<a [routerLink]="part.link">{{ part.text }}</a>} @else if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</li>
                 }
             </ol>
             }
@@ -63,7 +63,7 @@
             <div class="pf-article-cta">
                 <div>
                     <h2>Need help with your Shopify store?</h2>
-                    <p>Talk to a Shopify expert at Perfictus. Book a free 30-minute consultation and get honest, practical advice for your store.</p>
+                    <p>Talk to a Shopify expert at Perfictus. Explore our <a routerLink="/shopify-development">Shopify development services</a> or <a routerLink="/mobile-app-development">mobile app development</a>, and book a free 30-minute consultation for honest, practical advice.</p>
                 </div>
                 <a routerLink="/contact" class="pf-btn">Book a Free Consultation <i class="fa-solid fa-arrow-right"></i></a>
             </div>

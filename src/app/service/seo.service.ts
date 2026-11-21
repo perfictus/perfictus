@@ -59,7 +59,24 @@ export class SeoService {
     else this.meta.removeTag('property="article:published_time"');
 
     this.setCanonical(url);
-    this.setPageSchema(page.schema);
+    this.setPageSchema(this.withBreadcrumb(page, url));
+  }
+
+  // Adds a "Home › Page" BreadcrumbList when the page has a crumb and no breadcrumb of its own.
+  private withBreadcrumb(page: PageSeo, url: string): object | undefined {
+    const list = page.schema ? (Array.isArray(page.schema) ? [...page.schema] : [page.schema]) : [];
+    const hasCrumbs = list.some((s: any) => s?.['@type'] === 'BreadcrumbList');
+    if (page.crumb && !hasCrumbs) {
+      list.push({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' },
+          { '@type': 'ListItem', position: 2, name: page.crumb, item: url },
+        ],
+      });
+    }
+    return list.length ? list : undefined;
   }
 
   // Page-specific JSON-LD (the site-wide Organization data stays in index.html)

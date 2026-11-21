@@ -7,13 +7,14 @@
     <div class="container position-relative">
         <div class="row align-items-center">
             <div class="col-lg-7">
-                <span class="pf-eyebrow">Shopify Partner &middot; E-commerce Engineering</span>
-                <h1 class="pf-hero-title">
+                <!-- Main heading for search engines; the large slogan below keeps the same look -->
+                <h1 class="pf-eyebrow pf-hero-h1">Shopify &amp; E-commerce Development Agency</h1>
+                <p class="pf-hero-title">
                     @for (word of titleWords; track $index) {
                     <span class="pf-word" [class.pf-gradient-text]="$index === 0"
                         [style.animation-delay]="0.03 + $index * 0.08 + 's'">{{ word }}</span>{{ ' ' }}
                     }
-                </h1>
+                </p>
                 <p class="pf-hero-text">{{ tagline }}</p>
                 <div class="pf-hero-actions">
                     <a routerLink="/contact" class="pf-btn">Start a Project <i class="fa-solid fa-arrow-right"></i></a>

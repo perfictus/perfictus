@@ -4,6 +4,7 @@ import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 import { CONTACT, NAV_LINKS } from '../../../data/site-content';
 import { FOOTER_LEGAL_LINKS } from '../../../data/legal';
+import { ConsentService } from '../../../service/consent.service';
 
 @Component({
   selector: 'app-footer',
@@ -14,6 +15,7 @@ import { FOOTER_LEGAL_LINKS } from '../../../data/legal';
 export class FooterComponent {
   private router = inject(Router);
 
+  consent = inject(ConsentService);
   links = NAV_LINKS;
   legal = FOOTER_LEGAL_LINKS;
   contact = CONTACT;

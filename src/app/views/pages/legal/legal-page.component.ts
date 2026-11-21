@@ -1,6 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { BreadcrumbComponent } from '../../../components/breadcrumb/breadcrumb.component';
 import { LEGAL_PAGES, LEGAL_UPDATED, LegalPage } from '../../../data/legal';
 import { ViewBlock, toViewBlock } from '../blog/blog-utils';
@@ -8,7 +8,7 @@ import { ViewBlock, toViewBlock } from '../blog/blog-utils';
 // Privacy Policy, Cookie Policy, Terms of Use and Modern Slavery Statement (route data.slug picks the page).
 @Component({
   selector: 'app-legal-page',
-  imports: [BreadcrumbComponent, DatePipe],
+  imports: [BreadcrumbComponent, DatePipe, RouterLink],
   templateUrl: './legal-page.component.html',
 })
 export class LegalPageComponent {

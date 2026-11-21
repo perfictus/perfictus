@@ -40,9 +40,17 @@ const moods = [
   { d: '#40041a', m: '#be123c', l: '#fecdd3' }, // crimson
   { d: '#062a44', m: '#0284c7', l: '#a5f3fc' }, // sky
   { d: '#1b1404', m: '#a16207', l: '#fef08a' }, // gold
+  { d: '#062b1f', m: '#059669', l: '#a7f3d0' }, // emerald
+  { d: '#3b0a1e', m: '#e11d48', l: '#fdba74' }, // rose-orange
+  { d: '#0f1b3d', m: '#3b5bdb', l: '#c7d2fe' }, // royal
+  { d: '#2a0a3d', m: '#9333ea', l: '#f0abfc' }, // purple
+  { d: '#03283a', m: '#0e7490', l: '#a5f3fc' }, // ocean
+  { d: '#3a1004', m: '#c2410c', l: '#fde047' }, // sunset
 ];
 
 const asset = (p) => pathToFileURL(join(root, 'public/assets', p)).href;
+// "2026-12-01" -> "DECEMBER 2026"
+const label = (date) => new Date(date + 'T12:00:00Z').toLocaleString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }).toUpperCase();
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 
 function html(post, i) {
@@ -78,7 +86,7 @@ h2{font-size:32px;font-weight:500;color:rgba(255,255,255,.86);margin-top:20px;li
 .year{position:absolute;right:46px;top:40px;font-family:'Space Grotesk';font-weight:700;font-size:20px;letter-spacing:.12em;color:rgba(255,255,255,.75)}
 </style></head><body>
 <div class="blob b2"></div><div class="blob b1"></div><div class="grid"></div>
-<div class="year">FALL 2026</div>
+<div class="year">${esc(label(post.date))}</div>
 <div class="left">
   <span class="chip">${esc(post.category)}</span>
   <h1>${esc(headline)}</h1>

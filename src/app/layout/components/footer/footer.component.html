@@ -71,6 +71,7 @@
                 @for (item of legal; track item.link) {
                 <a [routerLink]="item.link">{{ item.title }}</a>
                 }
+                @if (consent.enabled) {<button type="button" class="pf-link-btn" (click)="consent.reopen()">Cookie Settings</button>}
             </nav>
         </div>
     </div>

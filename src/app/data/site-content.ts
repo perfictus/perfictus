@@ -63,6 +63,13 @@ export const CONTACT_FORM = {
   extraServices: ['Mobile App Development', 'Other'],
 };
 
+// Google Analytics 4 (property "perfictus.com" in perfictus@gmail.com).
+// Nothing loads until a visitor presses "Accept" on the cookie banner.
+// Leave measurementId empty to switch analytics (and the banner) off.
+export const ANALYTICS = {
+  measurementId: 'G-F047SHVLFB',
+};
+
 export const NAV_LINKS = [
   { title: 'Home', link: '/' },
   { title: 'Services', link: '/service' },

@@ -2868,3 +2868,66 @@ a.pf-sp-work:hover { color: var(--pf-text); }
   .pf-flag { margin-top: 0.38em; }
   &:hover { color: var(--pf-text); }
 }
+
+// Links inside blog posts and legal pages
+.pf-article-body a:not(.pf-btn) {
+  color: var(--pf-green-bright);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.3s;
+
+  &:hover { color: var(--pf-lime); }
+}
+
+// Home hero: the small label is the page's <h1>; the big slogan is a styled paragraph
+.pf-hero-h1 {
+  font-family: var(--pf-font-body, inherit);
+  font-size: 13px;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  color: var(--pf-green-bright);
+}
+
+p.pf-hero-title {
+  font-family: var(--pf-font-display);
+  color: var(--pf-text);
+}
+
+// ---------- Cookie consent banner ----------
+.pf-cookie {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  z-index: 1050;
+  max-width: 440px;
+  padding: 20px 22px;
+  border-radius: 18px;
+  background: rgba(10, 18, 14, 0.94);
+  border: 1px solid var(--pf-border-strong);
+  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(14px);
+  color: var(--pf-muted);
+  font-size: 14px;
+  line-height: 1.55;
+  animation: pf-cookie-in 0.5s var(--pf-ease) both;
+
+  p { margin: 0 0 14px; }
+  i { color: var(--pf-green-bright); margin-right: 6px; }
+  a { color: var(--pf-green-bright); text-decoration: underline; text-underline-offset: 3px; }
+  .pf-cookie-actions { display: flex; gap: 10px; justify-content: flex-end; }
+  .pf-btn--sm { padding: 9px 20px; font-size: 14px; }
+
+  @media (max-width: 575px) {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    max-width: none;
+    .pf-cookie-actions .pf-btn { flex: 1; justify-content: center; }
+  }
+}
+@keyframes pf-cookie-in { from { opacity: 0; transform: translateY(20px); } }
+.pf-footer-legal button.pf-link-btn {
+  background: none; border: 0; padding: 0; font-size: 14px; color: var(--pf-muted); cursor: pointer; transition: color 0.3s;
+  &:hover { color: var(--pf-green-bright); }
+}

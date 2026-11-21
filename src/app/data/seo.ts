@@ -22,6 +22,7 @@ export interface PageSeo {
   type?: 'website' | 'article';
   published?: string;  // ISO date for articles
   schema?: object;     // extra structured data (JSON-LD) for this page only
+  crumb?: string;      // breadcrumb name (Home › crumb) added to the page's structured data
 }
 
 export const SEO = {
@@ -32,36 +33,42 @@ export const SEO = {
     path: '/',
   },
   service: {
+    crumb: 'Services',
     title: 'Services – Shopify Development, SEO & E-commerce | Perfictus',
     description:
       'Shopify development and Shopify SEO first, plus remote developers, digital marketing, marketplace setup, graphic design and video editing for e-commerce brands.',
     path: '/service',
   },
   portfolio: {
+    crumb: 'Portfolio',
     title: 'Portfolio – Shopify Stores & Mobile Apps | Perfictus',
     description:
       'Shopify stores built by Perfictus for brands in India, the UK and the USA, including Tingle Tots, Boba Tea and The Mom Chic, plus the Yamama Asian Mart app in Kuwait.',
     path: '/portfolio',
   },
   about: {
+    crumb: 'About Us',
     title: 'About Perfictus | Shopify Partner & E-commerce Agency',
     description:
       'Perfictus is a Shopify Partner and e-commerce agency helping brands in Kuwait, the GCC, India, the UK and the USA grow with Shopify, SEO and performance marketing.',
     path: '/about',
   },
   contact: {
+    crumb: 'Contact Us',
     title: 'Contact Us – Free 30-Min Shopify Consultation | Perfictus',
     description:
       'Planning a Shopify store, migration or redesign? Book a free 30-minute consultation, email info@perfictus.com or call +91-7708621961 / +965-60360675.',
     path: '/contact',
   },
   blog: {
+    crumb: 'Blog',
     title: 'Blog – Shopify & E-commerce Guides | Perfictus',
     description:
       'Shopify and e-commerce guides from Perfictus: Shopify Editions, agentic commerce, BFCM, Shopify SEO, speed, Functions, Horizon themes and selling in the GCC.',
     path: '/blog/',
   },
   careers: {
+    crumb: 'Careers',
     title: 'Careers – Remote Mobile App Developer & Design Jobs | Perfictus',
     description:
       'Join Perfictus. We are hiring a remote Mobile App Developer (iOS & Android, cross-platform) and a Graphic Designer. We see perfection, not just degrees.',
@@ -80,11 +87,13 @@ export const SEO = {
     path: '/mobile-app-development',
   },
   sitemap: {
+    crumb: 'Sitemap',
     title: 'Sitemap – All Pages | Perfictus',
     description: 'All pages on perfictus.com: Shopify and mobile app development services, portfolio, blog articles, careers, contact and legal pages.',
     path: '/sitemap',
   },
   reviews: {
+    crumb: 'Client Reviews',
     title: 'Client Reviews – Rated 5.0 on Google | Perfictus',
     description: 'Read what clients say about Perfictus. Rated 5.0 from 16 Google reviews for Shopify store development, e-commerce websites and customer service.',
     path: '/client-reviews',
@@ -182,5 +191,5 @@ export function servicePageSeo(page: ServicePage, seo: PageSeo): PageSeo {
 
 // SEO for a legal page (Privacy, Cookies, Terms, Modern Slavery).
 export function legalPageSeo(page: LegalPage): PageSeo {
-  return { title: page.seoTitle, description: page.description, path: '/' + page.slug };
+  return { title: page.seoTitle, description: page.description, path: '/' + page.slug, crumb: page.name };
 }
