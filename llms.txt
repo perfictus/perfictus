@@ -1,0 +1,29 @@
+# Perfictus
+
+> Perfictus is a Shopify development agency and Shopify Partner. We design, build and grow Shopify and Shopify Plus stores for brands in India, Kuwait, the GCC, the United Kingdom and the United States, and we build iOS and Android mobile apps for e-commerce, grocery and delivery businesses.
+
+Contact: info@perfictus.com · +91-7708621961 (India) · +965-60360675 (Kuwait) · https://perfictus.com/contact
+
+## Services
+- [Shopify Development](https://perfictus.com/shopify-development): store setup, custom Shopify themes (Liquid, Online Store 2.0), Shopify Plus, checkout extensibility, Shopify Functions, migrations from WooCommerce/Magento/BigCommerce without losing SEO, custom Shopify apps, Shopify SEO and speed optimisation.
+- [Mobile App Development](https://perfictus.com/mobile-app-development): cross-platform iOS and Android apps, Shopify-connected shopping apps, grocery and delivery apps, payment gateways (MyFatoorah, KNET, Apple Pay, Google Pay), App Store and Google Play publishing.
+- [All services](https://perfictus.com/service): also SEO, digital marketing, marketplace and aggregator setup, remote developers, graphic design and video editing.
+
+## Company
+- [Portfolio](https://perfictus.com/portfolio): Shopify stores (Tingle Tots – India, Boba Tea – UK, The Mom Chic – USA) and the Yamama Asian Mart app (Kuwait).
+- [Client reviews](https://perfictus.com/client-reviews): rated 5.0 on Google.
+- [About](https://perfictus.com/about) · [Careers](https://perfictus.com/careers) · [Contact](https://perfictus.com/contact)
+
+## Blog
+- [Shopify Editions Fall ’26: The Updates Every Merchant Should Act On](https://perfictus.com/blog/shopify-editions-fall-2026): Shopify’s Fall ’26 Edition is all about AI agents, a smarter Sidekick and new admin tools. Here is what changed and what your store should do next.
+- [Agentic Commerce on Shopify: How to Get Your Products Sold by AI Assistants](https://perfictus.com/blog/agentic-commerce-shopify-ai-shopping): Shoppers now ask AI assistants what to buy. Learn how agentic commerce works on Shopify and how to make your products easy for AI to find and recommend.
+- [Black Friday Cyber Monday 2026: The Complete Shopify Checklist](https://perfictus.com/blog/black-friday-cyber-monday-2026-shopify-checklist): Black Friday is November 27, 2026. Use this Shopify BFCM checklist to prepare your store’s speed, offers, checkout, inventory, marketing and support.
+- [Shopify Scripts Have Ended: How to Move to Shopify Functions](https://perfictus.com/blog/shopify-scripts-to-shopify-functions): Shopify Scripts stopped running on June 30, 2026. Learn what replaced them, how Shopify Functions work and how to rebuild discounts, shipping and payment logic.
+- [Thank You & Order Status Pages: What the 2026 Checkout Upgrade Means for Your Store](https://perfictus.com/blog/shopify-thank-you-order-status-page-upgrade-2026): Shopify upgraded Thank you and Order status pages for non-Plus stores in August 2026. Here is what changed, what can break and how to fix tracking and upsells.
+- [Horizon Themes and Theme Blocks: Designing a Shopify Store in 2026](https://perfictus.com/blog/shopify-horizon-theme-blocks-guide): Shopify’s Horizon themes and theme blocks make stores more flexible than ever. Learn how they work, how AI block generation helps and when to go custom.
+- [Shopify Sidekick in 2026: Practical Ways to Run Your Store with AI](https://perfictus.com/blog/shopify-sidekick-ai-guide-2026): Shopify Sidekick can now write code, run reports and stage changes across your admin. Here are practical, safe ways to use it to save time every week.
+- [Shopify SEO in 2026: How to Rank in Google and AI Search](https://perfictus.com/blog/shopify-seo-guide-2026): A practical Shopify SEO guide for 2026: technical fixes, product and collection page optimisation, structured data, content and getting found in AI search.
+- [Shopify Speed Optimization: A Core Web Vitals Guide for 2026](https://perfictus.com/blog/shopify-speed-optimization-core-web-vitals): Slow stores lose sales. Learn how to measure and improve your Shopify store’s speed and Core Web Vitals (LCP, INP, CLS) with practical, proven fixes.
+- [How to Launch a Shopify Store in Kuwait and the GCC (2026 Guide)](https://perfictus.com/blog/launch-shopify-store-kuwait-gcc): A practical guide to launching a Shopify store in Kuwait, Saudi Arabia, the UAE and the GCC: payments, Arabic RTL, shipping, COD and marketing.
+- [Migrating to Shopify Without Losing SEO: A Step-by-Step Guide](https://perfictus.com/blog/migrate-to-shopify-without-losing-seo): Moving from WooCommerce, Magento or Wix to Shopify? Follow this step-by-step migration guide to keep your products, customers and Google rankings.
+- [Shopify vs Shopify Plus in 2026: When Should You Upgrade?](https://perfictus.com/blog/shopify-vs-shopify-plus-2026): Compare Shopify and Shopify Plus in 2026: checkout customisation, B2B, automation, expansion stores and support, plus clear signs it is time to upgrade.
