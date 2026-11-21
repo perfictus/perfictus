@@ -52,7 +52,7 @@ export const SEO = {
   contact: {
     title: 'Contact Us – Free 30-Min Shopify Consultation | Perfictus',
     description:
-      'Planning a Shopify store, migration or redesign? Book a free 30-minute consultation, email info@perfictus.com or call +91-7339346157 / +91-7708621961 / +965-60360675.',
+      'Planning a Shopify store, migration or redesign? Book a free 30-minute consultation, email info@perfictus.com or call +91-7708621961 / +965-60360675.',
     path: '/contact',
   },
   blog: {
@@ -62,9 +62,9 @@ export const SEO = {
     path: '/blog/',
   },
   careers: {
-    title: 'Careers – Remote Shopify & Design Jobs | Perfictus',
+    title: 'Careers – Remote Mobile App Developer & Design Jobs | Perfictus',
     description:
-      'Join Perfictus. We are hiring a remote Shopify App Developer and a Graphic Designer. We see perfection, not just degrees.',
+      'Join Perfictus. We are hiring a remote Mobile App Developer (iOS & Android, cross-platform) and a Graphic Designer. We see perfection, not just degrees.',
     path: '/careers',
   },
   shopify: {

@@ -2,14 +2,13 @@
 
 export const CONTACT = {
   email: 'info@perfictus.com',
-  careersEmail: 'talenthub@perfictus.com',
+  careersEmail: 'info@perfictus.com',
   // Phone numbers grouped by country: one flag per country, numbers in order (the first is the main one).
   phones: [
     {
       country: 'India',
       flag: 'assets/img/flags/india.svg',
       numbers: [
-        { label: '+91-7339346157', href: 'tel:+917339346157' },
         { label: '+91-7708621961', href: 'tel:+917708621961' },
       ],
     },
@@ -214,24 +213,26 @@ export const APPS = [
 
 export const POSITIONS = [
   {
-    title: 'Shopify App Developer',
+    title: 'Mobile App Developer (iOS & Android)',
     responsibilities: [
-      'Develop custom Shopify apps (public and private)',
-      'Work with Shopify APIs (Admin API, Storefront API, Webhooks)',
-      'Build and maintain frontend interfaces using modern JavaScript frameworks',
-      'Integrate third-party services and payment gateways',
-      'Debug, optimize, and maintain existing Shopify applications',
-      'Ensure app security, performance, and scalability',
-      'Provide technical support and improvements based on business needs',
+      'Build cross-platform mobile apps for iOS and Android from a single codebase',
+      'Develop shopping, grocery and delivery apps with carts, checkout and order tracking',
+      'Integrate REST & GraphQL APIs, including Shopify and custom backends',
+      'Add payment gateways (MyFatoorah, KNET, Apple Pay, Google Pay, Razorpay, Stripe)',
+      'Implement push notifications, maps, location and real-time order updates',
+      'Publish and maintain apps on the Apple App Store and Google Play',
+      'Debug, test and optimise app performance, security and battery usage',
+      'Work with designers to turn Figma screens into polished, responsive app UIs',
     ],
     skills: [
-      'Strong experience with Shopify App Development',
-      'Proficiency in JavaScript, TypeScript, Node.js',
-      'Experience with React, Remix, or Next.js',
-      'Familiarity with REST & GraphQL APIs',
-      'Knowledge of Shopify Polaris and App Bridge (preferred)',
-      'Experience with databases (MySQL, PostgreSQL, or MongoDB)',
-      'Good problem-solving and communication skills',
+      'Strong experience in cross-platform development with Flutter (Dart) or React Native',
+      'Apps published on both the App Store and Google Play',
+      'Solid knowledge of iOS (Xcode) and Android (Android Studio) build and release processes',
+      'State management (Provider, Riverpod, Bloc, Redux or similar)',
+      'Experience with Firebase (auth, push notifications, analytics, Crashlytics)',
+      'Working with REST & GraphQL APIs, JSON and local storage',
+      'Git version control and clean, maintainable code',
+      'Native Swift/Kotlin, Shopify Storefront API or payment gateway experience is a plus',
     ],
   },
   {
