@@ -46,8 +46,15 @@
                     <h4>Contact Information</h4>
                     <ul>
                         <li><a [href]="'mailto:' + contact.email"><img [src]="contact.icons.email" alt="Email" class="pf-flag pf-flag--icon"> {{ contact.email }}</a></li>
-                        @for (phone of contact.phones; track phone.href) {
-                        <li><a [href]="phone.href"><img [src]="phone.flag" [alt]="phone.country" class="pf-flag"> {{ phone.label }}</a></li>
+                        @for (group of contact.phones; track group.country) {
+                        <li class="pf-phone-group">
+                            <img [src]="group.flag" [alt]="group.country" class="pf-flag">
+                            <span class="pf-phone-nums">
+                                @for (phone of group.numbers; track phone.href) {
+                                <a [href]="phone.href">{{ phone.label }}</a>
+                                }
+                            </span>
+                        </li>
                         }
                     </ul>
                 </div>

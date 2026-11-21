@@ -10,7 +10,7 @@ export const COMPANY = {
   name: 'Perfictus',
   address: 'St George Street, Azhagappapuram, Kanniyakumari, Tamil Nadu 629702, India',
   email: 'info@perfictus.com',
-  phones: '+91-7708621961 (India) and +965-60360675 (Kuwait)',
+  phones: '+91-7339346157, +91-7708621961 (India) and +965-60360675 (Kuwait)',
 };
 
 export interface LegalPage {

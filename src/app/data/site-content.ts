@@ -3,11 +3,23 @@
 export const CONTACT = {
   email: 'info@perfictus.com',
   careersEmail: 'talenthub@perfictus.com',
+  // Phone numbers grouped by country: one flag per country, numbers in order (the first is the main one).
   phones: [
-    { label: '+965-60360675', href: 'tel:+96560360675', flag: 'assets/img/flags/kuwait.svg', country: 'Kuwait' },
-    { label: '+91-7708621961', href: 'tel:+917708621961', flag: 'assets/img/flags/india.svg', country: 'India' },
+    {
+      country: 'India',
+      flag: 'assets/img/flags/india.svg',
+      numbers: [
+        { label: '+91-7339346157', href: 'tel:+917339346157' },
+        { label: '+91-7708621961', href: 'tel:+917708621961' },
+      ],
+    },
+    {
+      country: 'Kuwait',
+      flag: 'assets/img/flags/kuwait.svg',
+      numbers: [{ label: '+965-60360675', href: 'tel:+96560360675' }],
+    },
   ],
-  whatsapp: 'https://wa.me/7708621961',
+  whatsapp: 'https://wa.me/917708621961',
   icons: {
     email: 'assets/img/social/email.svg',
     whatsapp: 'assets/img/social/whatsapp.svg',

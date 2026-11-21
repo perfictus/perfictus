@@ -11,8 +11,15 @@
 
     <div>
         <div class="pf-mmenu-contact">
-            @for (phone of contact.phones; track phone.href) {
-            <a [href]="phone.href"><img [src]="phone.flag" [alt]="phone.country" class="pf-flag"> {{ phone.label }}</a>
+            @for (group of contact.phones; track group.country) {
+            <div class="pf-phone-group">
+                <img [src]="group.flag" [alt]="group.country" class="pf-flag">
+                <span class="pf-phone-nums">
+                    @for (phone of group.numbers; track phone.href) {
+                    <a [href]="phone.href">{{ phone.label }}</a>
+                    }
+                </span>
+            </div>
             }
             <a [href]="'mailto:' + contact.email"><i class="fa-solid fa-envelope"></i> {{ contact.email }}</a>
         </div>

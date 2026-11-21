@@ -13,10 +13,15 @@
                 <div class="pf-card pf-contact-card" pfSpotlight>
                     <span class="pf-icon"><i class="fa-solid fa-phone-volume"></i></span>
                     <h3>Phone Number</h3>
-                    @for (phone of contact.phones; track phone.href) {
-                    <a class="pf-contact-line" [href]="phone.href">
-                        <img [src]="phone.flag" [alt]="phone.country" class="pf-flag"> {{ phone.label }}
-                    </a>
+                    @for (group of contact.phones; track group.country) {
+                    <div class="pf-contact-line pf-phone-group">
+                        <img [src]="group.flag" [alt]="group.country" class="pf-flag">
+                        <span class="pf-phone-nums">
+                            @for (phone of group.numbers; track phone.href) {
+                            <a [href]="phone.href">{{ phone.label }}</a>
+                            }
+                        </span>
+                    </div>
                     }
                 </div>
             </div>

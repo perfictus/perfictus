@@ -52,7 +52,7 @@ export const SEO = {
   contact: {
     title: 'Contact Us – Free 30-Min Shopify Consultation | Perfictus',
     description:
-      'Planning a Shopify store, migration or redesign? Book a free 30-minute consultation, email info@perfictus.com or call +965-60360675 / +91-7708621961.',
+      'Planning a Shopify store, migration or redesign? Book a free 30-minute consultation, email info@perfictus.com or call +91-7339346157 / +91-7708621961 / +965-60360675.',
     path: '/contact',
   },
   blog: {

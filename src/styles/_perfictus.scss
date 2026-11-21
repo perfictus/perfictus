@@ -2843,3 +2843,28 @@ a.pf-sp-work:hover { color: var(--pf-text); }
 }
 
 .pf-review-cta { margin-top: 32px; }
+
+// One flag per country with that country's numbers stacked beside it
+.pf-phone-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  .pf-flag { margin-top: 0.32em; }
+}
+
+.pf-phone-nums {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  a { color: inherit; transition: color 0.3s; }
+  a:hover { color: var(--pf-green-bright); }
+}
+
+.pf-contact-card .pf-contact-line.pf-phone-group {
+  align-items: flex-start;
+
+  .pf-flag { margin-top: 0.38em; }
+  &:hover { color: var(--pf-text); }
+}
