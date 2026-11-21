@@ -1,0 +1,21 @@
+<app-breadcrumb title="Site" highlight="Map" eyebrow="All Pages"
+    lead="Every page on perfictus.com in one place" />
+
+<section class="pf-section">
+    <div class="container">
+        <div class="row g-4">
+            @for (group of groups; track group.title) {
+            <div class="col-lg-6" data-aos="fade-up" [attr.data-aos-delay]="($index % 2) * 120">
+                <div class="pf-card pf-sitemap-group">
+                    <h2><span class="pf-icon"><i [class]="group.icon"></i></span> {{ group.title }}</h2>
+                    <ul>
+                        @for (item of group.links; track item.link) {
+                        <li><a [routerLink]="item.link"><i class="fa-solid fa-chevron-right"></i> {{ item.title }}</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

@@ -2043,7 +2043,42 @@ img {
   border-top: 1px solid var(--pf-border);
   text-align: center;
 
-  p { font-size: 14px; }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  p { font-size: 14px; margin: 0; }
+
+  // Desktop: copyright on the left, legal links on the right
+  @media (min-width: 992px) {
+    text-align: left;
+
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 24px;
+    }
+  }
+}
+
+.pf-footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 22px;
+
+  a {
+    font-size: 14px;
+    color: var(--pf-muted);
+    transition: color 0.3s;
+
+    &:hover { color: var(--pf-green-bright); }
+  }
+
+  @media (min-width: 992px) { justify-content: flex-end; }
 }
 
 // ---------- Floating widgets ----------
@@ -2593,3 +2628,218 @@ img {
   0% { transform: scale(0.4); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
+
+// ---------- Dedicated service pages (/shopify-development, /mobile-app-development) ----------
+.pf-page-hero .pf-sp-actions {
+  justify-content: center;
+  margin-top: 36px;
+  opacity: 1;
+  animation: none;
+}
+
+.pf-sp-para { margin-top: 18px; }
+
+.pf-sp-points .pf-checklist { margin-top: 0; }
+
+.pf-sp-step {
+  h3 { margin-top: 18px; }
+}
+
+.pf-sp-step-num {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  font-family: var(--pf-font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: #04110a;
+  background: var(--pf-gradient);
+}
+
+.pf-sp-work {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: var(--pf-text);
+
+  h3 { margin: 14px 0 10px; }
+  p { flex-grow: 1; }
+  .pf-link-arrow { margin-top: 18px; }
+  .pf-checklist { margin-top: 18px; li { font-size: 15px; } i { width: 24px; height: 24px; font-size: 11px; } }
+  .pf-store-btns { margin-top: 24px; }
+  .pf-store-btn { padding: 10px 20px; font-weight: 600; i { font-size: 22px; } }
+}
+
+a.pf-sp-work:hover { color: var(--pf-text); }
+
+.pf-sp-app-head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 8px;
+
+  h3 { margin: 6px 0 0; }
+}
+
+.pf-sp-app-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.pf-sp-answer {
+  padding: 0 30px 28px;
+  margin: 0;
+  color: var(--pf-muted);
+  font-size: 16px;
+}
+
+@media (max-width: 575px) {
+  .pf-sp-answer { padding: 0 20px 22px; }
+}
+
+// ---------- Legal pages ----------
+.pf-legal { padding-top: 48px; }
+
+// ---------- Sitemap page ----------
+.pf-sitemap-group {
+  height: 100%;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 24px;
+    margin-bottom: 22px;
+
+    .pf-icon { margin: 0; width: 48px; height: 48px; font-size: 18px; }
+  }
+
+  ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+
+  a {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 8px 0;
+    color: var(--pf-muted);
+    transition: color 0.3s, transform 0.3s var(--pf-ease);
+
+    i { font-size: 11px; color: var(--pf-green-bright); }
+
+    &:hover { color: var(--pf-text); transform: translateX(4px); }
+  }
+}
+
+// ---------- Client reviews ----------
+.pf-review-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 32px 36px;
+  margin-bottom: 40px;
+  border-radius: var(--pf-radius);
+  background: linear-gradient(135deg, rgba(34, 232, 142, 0.12), rgba(196, 255, 97, 0.04));
+  border: 1px solid rgba(34, 232, 142, 0.3);
+
+  @media (max-width: 575px) { padding: 26px 22px; }
+}
+
+.pf-review-score {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  p { margin: 4px 0 0; color: var(--pf-muted); font-size: 15px; }
+}
+
+.pf-review-g {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.pf-review-num {
+  font-family: var(--pf-font-display);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.pf-review-stars {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+  color: #fbbc04;
+  font-size: 16px;
+
+  .is-off { color: var(--pf-border-strong); }
+}
+
+.pf-review-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pf-review-grid {
+  columns: 3 320px;
+  column-gap: 24px;
+}
+
+.pf-review-card {
+  position: relative;
+  break-inside: avoid;
+  margin: 0 0 24px;
+
+  blockquote {
+    margin: 18px 0 24px;
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--pf-text);
+    white-space: pre-line;
+  }
+
+  figcaption {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 18px;
+    border-top: 1px solid var(--pf-border);
+
+    strong { display: block; font-size: 16px; }
+    small { color: var(--pf-muted); font-size: 13px; }
+  }
+}
+
+.pf-review-quote {
+  position: absolute;
+  top: 26px;
+  right: 28px;
+  font-size: 34px;
+  color: rgba(34, 232, 142, 0.18);
+}
+
+.pf-review-avatar {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-weight: 700;
+  color: #04110a;
+  background: var(--pf-gradient);
+}
+
+.pf-review-cta { margin-top: 32px; }

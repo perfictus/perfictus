@@ -60,6 +60,11 @@
     <div class="pf-footer-bottom">
         <div class="container">
             <p>&copy; {{ year }} Perfictus. All rights reserved.</p>
+            <nav class="pf-footer-legal" aria-label="Legal">
+                @for (item of legal; track item.link) {
+                <a [routerLink]="item.link">{{ item.title }}</a>
+                }
+            </nav>
         </div>
     </div>
 </footer>

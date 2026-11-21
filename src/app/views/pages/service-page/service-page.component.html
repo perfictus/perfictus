@@ -1,0 +1,161 @@
+<app-breadcrumb [title]="page.title" [highlight]="page.highlight" [eyebrow]="page.eyebrow" [lead]="page.lead">
+    <div class="pf-hero-actions pf-sp-actions">
+        <a routerLink="/contact" class="pf-btn">Get a Free Consultation <i class="fa-solid fa-arrow-right"></i></a>
+        <a routerLink="/portfolio" class="pf-btn pf-btn--ghost">View Our Work</a>
+    </div>
+</app-breadcrumb>
+
+<!-- Intro -->
+<section class="pf-section">
+    <div class="pf-blob pf-blob--green" style="top: 0; right: -300px;"></div>
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <span class="pf-eyebrow" data-aos="fade-up">{{ page.name }}</span>
+                <h2 class="pf-title" data-aos="fade-up" data-aos-delay="100">{{ page.intro.title }} <span class="pf-gradient-text">{{ page.intro.highlight }}</span></h2>
+                @for (text of page.intro.paragraphs; track $index) {
+                <p class="pf-lead pf-sp-para" data-aos="fade-up" data-aos-delay="200">{{ text }}</p>
+                }
+            </div>
+            <div class="col-lg-5">
+                <div class="pf-card pf-sp-points" data-aos="fade-left">
+                    <ul class="pf-checklist">
+                        @for (point of page.intro.points; track point) {
+                        <li><i class="fa-solid fa-check"></i> {{ point }}</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What we offer -->
+<section class="pf-section pf-section--alt">
+    <div class="pf-grid-bg"></div>
+    <div class="container">
+        <div class="pf-section-head is-center">
+            <span class="pf-eyebrow" data-aos="fade-up">What We Offer</span>
+            <h2 class="pf-title" data-aos="fade-up" data-aos-delay="100">{{ page.name }} <span class="pf-gradient-text">Services</span></h2>
+        </div>
+        <div class="row g-4">
+            @for (offer of page.offers; track offer.title) {
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" [attr.data-aos-delay]="($index % 3) * 120">
+                <div class="pf-card" pfSpotlight>
+                    <span class="pf-card-num">{{ ($index + 1).toString().padStart(2, '0') }}</span>
+                    <span class="pf-icon"><i [class]="offer.icon"></i></span>
+                    <h3>{{ offer.title }}</h3>
+                    <p>{{ offer.desc }}</p>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Process -->
+<section class="pf-section">
+    <div class="container">
+        <div class="pf-section-head is-center">
+            <span class="pf-eyebrow" data-aos="fade-up">How We Work</span>
+            <h2 class="pf-title" data-aos="fade-up" data-aos-delay="100">From Idea to <span class="pf-gradient-text">Launch</span></h2>
+        </div>
+        <div class="row g-4">
+            @for (step of page.process; track step.title) {
+            <div class="col-lg-3 col-sm-6" data-aos="fade-up" [attr.data-aos-delay]="$index * 120">
+                <div class="pf-card pf-sp-step" pfSpotlight>
+                    <span class="pf-sp-step-num">{{ $index + 1 }}</span>
+                    <h3>{{ step.title }}</h3>
+                    <p>{{ step.desc }}</p>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Our work -->
+<section class="pf-section pf-section--alt">
+    <div class="pf-grid-bg"></div>
+    <div class="container">
+        <div class="pf-section-head is-center">
+            <span class="pf-eyebrow" data-aos="fade-up">Our Work</span>
+            <h2 class="pf-title" data-aos="fade-up" data-aos-delay="100">
+                @if (page.work === 'projects') {Shopify Stores <span class="pf-gradient-text">We've Built</span>}
+                @else {Apps <span class="pf-gradient-text">We've Built</span>}
+            </h2>
+        </div>
+        <div class="row g-4 justify-content-center">
+            @if (page.work === 'projects') {
+            @for (item of projects; track item.name) {
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" [attr.data-aos-delay]="$index * 120">
+                <a class="pf-card pf-sp-work" [href]="item.url" target="_blank" rel="noopener noreferrer" pfSpotlight>
+                    <span class="pf-project-region"><img [src]="item.icon" alt=""> <span>{{ item.region }} &middot; <span class="pf-project-type">{{ item.type }}</span></span></span>
+                    <h3>{{ item.name }}</h3>
+                    <p>{{ item.desc }}</p>
+                    <span class="pf-link-arrow">Visit store <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </div>
+            }
+            } @else {
+            @for (app of apps; track app.name) {
+            <div class="col-lg-6" data-aos="fade-up">
+                <div class="pf-card pf-sp-work pf-sp-app">
+                    <div class="pf-sp-app-head">
+                        <img [src]="app.icon" [alt]="app.name + ' app icon'" class="pf-sp-app-icon">
+                        <div>
+                            <span class="pf-project-region"><img [src]="app.flag" alt=""> {{ app.region }} · {{ app.category }}</span>
+                            <h3>{{ app.name }}</h3>
+                        </div>
+                    </div>
+                    <p>{{ app.desc }}</p>
+                    <ul class="pf-checklist">
+                        @for (f of app.features; track f) {
+                        <li><i class="fa-solid fa-check"></i> {{ f }}</li>
+                        }
+                    </ul>
+                    <div class="pf-store-btns">
+                        @if (app.appStore) {
+                        <a [href]="app.appStore" target="_blank" rel="noopener noreferrer" class="pf-store-btn"><i class="fa-brands fa-apple"></i> App Store</a>
+                        }
+                        @if (app.playStore) {
+                        <a [href]="app.playStore" target="_blank" rel="noopener noreferrer" class="pf-store-btn"><i class="fa-brands fa-google-play"></i> Google Play</a>
+                        }
+                    </div>
+                </div>
+            </div>
+            }
+            }
+        </div>
+        <div class="text-center mt-5" data-aos="fade-up">
+            <a routerLink="/portfolio" class="pf-link-arrow">See the full portfolio <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="pf-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="pf-section-head is-center">
+                    <span class="pf-eyebrow" data-aos="fade-up">FAQ</span>
+                    <h2 class="pf-title" data-aos="fade-up" data-aos-delay="100">Frequently Asked <span class="pf-gradient-text">Questions</span></h2>
+                </div>
+                @for (faq of page.faqs; track faq.q) {
+                <div class="pf-acc-item" [class.is-open]="openIndex === $index" data-aos="fade-up" [attr.data-aos-delay]="$index * 100">
+                    <button type="button" class="pf-acc-head" (click)="toggle($index)" [attr.aria-expanded]="openIndex === $index">
+                        <span><h3>{{ faq.q }}</h3></span>
+                        <span class="pf-acc-toggle"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="pf-acc-body">
+                        <div>
+                            <p class="pf-sp-answer">{{ faq.a }}</p>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

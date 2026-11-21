@@ -3,6 +3,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 import { CONTACT, NAV_LINKS } from '../../../data/site-content';
+import { FOOTER_LEGAL_LINKS } from '../../../data/legal';
 
 @Component({
   selector: 'app-footer',
@@ -14,6 +15,7 @@ export class FooterComponent {
   private router = inject(Router);
 
   links = NAV_LINKS;
+  legal = FOOTER_LEGAL_LINKS;
   contact = CONTACT;
   year = new Date().getFullYear();
 

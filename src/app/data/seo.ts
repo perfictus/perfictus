@@ -1,4 +1,6 @@
 import { BLOG_AUTHOR, BlogPost } from './blog';
+import { ServicePage } from './service-pages';
+import { LegalPage } from './legal';
 
 // Search-engine text for each page: <title>, meta description and the canonical path.
 // Shown in Google results and in link previews (WhatsApp, LinkedIn, Facebook, X).
@@ -30,13 +32,13 @@ export const SEO = {
     path: '/',
   },
   service: {
-    title: 'Shopify Development, SEO & E-commerce Services | Perfictus',
+    title: 'Services – Shopify Development, SEO & E-commerce | Perfictus',
     description:
       'Shopify development and Shopify SEO first, plus remote developers, digital marketing, marketplace setup, graphic design and video editing for e-commerce brands.',
     path: '/service',
   },
   portfolio: {
-    title: 'Shopify Store Portfolio & Mobile Apps | Perfictus',
+    title: 'Portfolio – Shopify Stores & Mobile Apps | Perfictus',
     description:
       'Shopify stores built by Perfictus for brands in India, the UK and the USA, including Tingle Tots, Boba Tea and The Mom Chic, plus the Yamama Asian Mart app in Kuwait.',
     path: '/portfolio',
@@ -48,22 +50,44 @@ export const SEO = {
     path: '/about',
   },
   contact: {
-    title: 'Hire Shopify Developers – Free 30-Min Consultation | Perfictus',
+    title: 'Contact Us – Free 30-Min Shopify Consultation | Perfictus',
     description:
       'Planning a Shopify store, migration or redesign? Book a free 30-minute consultation, email info@perfictus.com or call +965-60360675 / +91-7708621961.',
     path: '/contact',
   },
   blog: {
-    title: 'Shopify Blog – E-commerce Guides, Updates & Tips | Perfictus',
+    title: 'Blog – Shopify & E-commerce Guides | Perfictus',
     description:
       'Shopify and e-commerce guides from Perfictus: Shopify Editions, agentic commerce, BFCM, Shopify SEO, speed, Functions, Horizon themes and selling in the GCC.',
     path: '/blog/',
   },
   careers: {
-    title: 'Careers – Remote Shopify Developer & Design Jobs | Perfictus',
+    title: 'Careers – Remote Shopify & Design Jobs | Perfictus',
     description:
       'Join Perfictus. We are hiring a remote Shopify App Developer and a Graphic Designer. We see perfection, not just degrees.',
     path: '/careers',
+  },
+  shopify: {
+    title: 'Shopify Development Services – Shopify Experts | Perfictus',
+    description:
+      'Shopify development agency for custom Shopify & Shopify Plus stores, themes, apps, migrations and Shopify SEO. Serving Kuwait, the GCC, India, the UK and the USA.',
+    path: '/shopify-development',
+  },
+  mobileApp: {
+    title: 'Mobile App Development – iOS & Android Apps | Perfictus',
+    description:
+      'iOS and Android app development for e-commerce, grocery and delivery businesses. Secure payments, order tracking and App Store & Google Play publishing.',
+    path: '/mobile-app-development',
+  },
+  sitemap: {
+    title: 'Sitemap – All Pages | Perfictus',
+    description: 'All pages on perfictus.com: Shopify and mobile app development services, portfolio, blog articles, careers, contact and legal pages.',
+    path: '/sitemap',
+  },
+  reviews: {
+    title: 'Client Reviews – Rated 5.0 on Google | Perfictus',
+    description: 'Read what clients say about Perfictus. Rated 5.0 from 16 Google reviews for Shopify store development, e-commerce websites and customer service.',
+    path: '/client-reviews',
   },
   notFound: {
     title: 'Page Not Found | Perfictus',
@@ -112,4 +136,51 @@ export function blogPostSeo(post: BlogPost): PageSeo {
       },
     ],
   };
+}
+
+
+// SEO + Service, Breadcrumb and FAQ structured data for a dedicated service page.
+export function servicePageSeo(page: ServicePage, seo: PageSeo): PageSeo {
+  const url = SITE.url + seo.path;
+  return {
+    ...seo,
+    schema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        '@id': url + '#service',
+        name: page.name,
+        serviceType: page.name,
+        description: seo.description,
+        url,
+        provider: { '@id': SITE.url + '/#organization' },
+        areaServed: ['Kuwait', 'Saudi Arabia', 'United Arab Emirates', 'Qatar', 'Bahrain', 'Oman', 'India', 'United Kingdom', 'United States'],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: page.name,
+          itemListElement: page.offers.map((o) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: o.title, description: o.desc } })),
+        },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: SITE.url + '/service' },
+          { '@type': 'ListItem', position: 3, name: page.name, item: url },
+        ],
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: page.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+      },
+    ],
+  };
+}
+
+
+// SEO for a legal page (Privacy, Cookies, Terms, Modern Slavery).
+export function legalPageSeo(page: LegalPage): PageSeo {
+  return { title: page.seoTitle, description: page.description, path: '/' + page.slug };
 }

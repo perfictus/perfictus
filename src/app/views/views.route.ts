@@ -9,7 +9,13 @@ import { CareersComponent } from "./pages/careers/careers.component";
 import { BlogComponent } from "./pages/blog/blog.component";
 import { BlogPostComponent } from "./pages/blog/blog-post.component";
 import { BLOG_POSTS } from "../data/blog";
-import { SEO, blogPostSeo } from "../data/seo";
+import { SEO, blogPostSeo, legalPageSeo, servicePageSeo } from "../data/seo";
+import { LEGAL_PAGES } from "../data/legal";
+import { LegalPageComponent } from "./pages/legal/legal-page.component";
+import { SitemapPageComponent } from "./pages/sitemap/sitemap-page.component";
+import { ClientReviewsComponent } from "./pages/client-reviews/client-reviews.component";
+import { SERVICE_PAGES } from "../data/service-pages";
+import { ServicePageComponent } from "./pages/service-page/service-page.component";
 
 export const VIEWS_ROUTE: Route[] = [
     // "/" is the home page; "/home" shows the same page and points Google to "/"
@@ -19,6 +25,9 @@ export const VIEWS_ROUTE: Route[] = [
     { path: 'portfolio', component: PortfolioComponent, data: SEO.portfolio },
     { path: 'service', component: Service1Component, data: SEO.service },
     { path: 'about', component: AboutUSComponent, data: SEO.about },
+    // dedicated service pages (not in the menus; listed in the sitemap for Google sitelinks)
+    { path: 'shopify-development', component: ServicePageComponent, data: { ...servicePageSeo(SERVICE_PAGES[0], SEO.shopify), slug: 'shopify-development' } },
+    { path: 'mobile-app-development', component: ServicePageComponent, data: { ...servicePageSeo(SERVICE_PAGES[1], SEO.mobileApp), slug: 'mobile-app-development' } },
     { path: 'blog', component: BlogComponent, data: SEO.blog },
     // one static route per post, so every article is pre-rendered as its own page
     ...BLOG_POSTS.map((post): Route => ({
@@ -28,5 +37,13 @@ export const VIEWS_ROUTE: Route[] = [
     })),
     { path: 'contact', component: ContactUsComponent, data: SEO.contact },
     { path: 'careers', component: CareersComponent, data: SEO.careers },
+    { path: 'client-reviews', component: ClientReviewsComponent, data: SEO.reviews },
+    { path: 'sitemap', component: SitemapPageComponent, data: SEO.sitemap },
+    // footer legal pages
+    ...LEGAL_PAGES.map((page): Route => ({
+        path: page.slug,
+        component: LegalPageComponent,
+        data: { ...legalPageSeo(page), slug: page.slug },
+    })),
     { path: 'error', component: Error404Component, data: SEO.notFound },
 ];
