@@ -5,7 +5,11 @@
         <div class="pf-cta-box" data-aos="zoom-in">
             <div class="pf-grid-bg"></div>
             <span class="pf-eyebrow">Let's work together</span>
+            @if (isHome()) {
+            <h2>Ready To Launch Or Grow Your <span class="pf-gradient-text">Shopify Store?</span></h2>
+            } @else {
             <h2>Ready To Grow Your Business With <span class="pf-gradient-text">Perfictus</span></h2>
+            }
             <p>Perfictus is a strategic digital and e-commerce partner helping businesses grow through technology, performance marketing, and impactful digital connections</p>
             <div class="pf-hero-actions">
                 <a routerLink="/contact" class="pf-btn">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
@@ -21,7 +25,7 @@
             <div class="row">
                 <div class="col-lg-5 pf-footer-about">
                     <a routerLink="/" class="pf-logo"><img src="assets/img/logo/perfictus-white.png" alt="Perfictus"></a>
-                    <p>Perfictus is a performance-led digital and e-commerce agency delivering SEO, Shopify solutions, integrations, and growth focus.</p>
+                    <p>Perfictus is a Shopify development agency and Shopify Partner building high-converting Shopify stores, custom themes, apps, integrations and Shopify SEO for growing brands.</p>
                     <div class="pf-socials pf-socials--brand">
                         @for (social of contact.socials; track social.href) {
                         <a [href]="social.href" target="_blank" rel="noopener" [attr.aria-label]="social.name"><img [src]="social.logo" [alt]="social.name"></a>

@@ -13,6 +13,7 @@ export class PortfolioComponent {
   projects = PROJECTS;
   apps = APPS;
   active = 0;
+  activeApp: number | null = null;   // set when a mobile-app tab (e.g. Kuwait) is selected
 
   get project() {
     return this.projects[this.active];
@@ -20,5 +21,11 @@ export class PortfolioComponent {
 
   select(index: number) {
     this.active = index;
+    this.activeApp = null;
+  }
+
+  scrollToApp(index: number) {
+    this.activeApp = index;
+    document.getElementById('app-' + index)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }

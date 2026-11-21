@@ -32,6 +32,7 @@
     "bootstrap": "^5.3.5",
     "gsap": "^3.12.7",
     "jquery": "^3.7.1",
+    "libphonenumber-js": "^1.12.10",
     "ngx-owl-carousel-o": "^19.0.0",
     "ngx-slick-carousel": "^19.0.0",
     "rxjs": "~7.8.2",

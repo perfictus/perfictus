@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { BreadcrumbComponent } from "../../../components/breadcrumb/breadcrumb.component";
 import { ContactComponent } from "./components/contact/contact.component";
+import { ContactFormComponent } from "./components/contact-form/contact-form.component";
 import { CONSULTATION } from '../../../data/site-content';
 
 @Component({
   selector: 'app-contact-us',
-  imports: [BreadcrumbComponent, ContactComponent],
+  imports: [BreadcrumbComponent, ContactComponent, ContactFormComponent],
   templateUrl: './contact-us.component.html',
   styles: ``
 })

@@ -1,6 +1,6 @@
 // Prepares the pre-rendered build in dist/browser for GitHub Pages hosting.
 //
-// - dist/browser/contact/index.html -> dist/browser/contact.html
+// - dist/browser/contact/index.html -> dist/browser/contact.html (also nested, e.g. blog posts)
 //   GitHub Pages serves /contact from contact.html with a 200 status and no
 //   redirect, so every page URL matches its canonical link exactly.
 // - 404.html = the client-side app shell, so unknown URLs still show the
@@ -17,15 +17,26 @@ if (!existsSync(join(out, 'index.html'))) {
   process.exit(1);
 }
 
+// Depth-first: blog/<post>/index.html -> blog/<post>.html. A folder that still has
+// other pages in it (like blog/) keeps its index.html, so /blog/ is served from it.
 const flattened = [];
-for (const name of readdirSync(out)) {
-  const dir = join(out, name);
-  const page = join(dir, 'index.html');
-  if (name === 'assets' || name === 'media' || !statSync(dir).isDirectory() || !existsSync(page)) continue;
-  renameSync(page, join(out, `${name}.html`));
-  if (readdirSync(dir).length === 0) rmdirSync(dir);
-  flattened.push(`/${name}`);
+function flatten(dir, url) {
+  for (const name of readdirSync(dir)) {
+    const sub = join(dir, name);
+    if ((dir === out && (name === 'assets' || name === 'media')) || !statSync(sub).isDirectory()) continue;
+    flatten(sub, `${url}/${name}`);
+    const page = join(sub, 'index.html');
+    if (!existsSync(page)) continue;
+    if (readdirSync(sub).length === 1) {
+      renameSync(page, `${sub}.html`);
+      rmdirSync(sub);
+      flattened.push(`${url}/${name}`);
+    } else {
+      flattened.push(`${url}/${name}/`);
+    }
+  }
 }
+flatten(out, '');
 
 const shell = existsSync(join(out, 'index.csr.html')) ? 'index.csr.html' : 'index.html';
 copyFileSync(join(out, shell), join(out, '404.html'));

@@ -1,0 +1,92 @@
+<article class="pf-article">
+    <header class="pf-article-hero">
+        <div class="pf-grid-bg"></div>
+        <div class="pf-blob pf-blob--green"></div>
+        <div class="container position-relative">
+            <nav class="pf-crumbs pf-article-crumbs" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <a routerLink="/blog">Blog</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>{{ post.category }}</span>
+            </nav>
+            <span class="pf-blog-cat">{{ post.category }}</span>
+            <h1>{{ post.title }}</h1>
+            <div class="pf-blog-meta pf-article-meta">
+                <span><i class="fa-regular fa-user"></i> {{ author }}</span>
+                <span><i class="fa-regular fa-calendar"></i> <time [attr.datetime]="post.date">{{ post.date | date: 'MMMM d, y' }}</time></span>
+                <span><i class="fa-regular fa-clock"></i> {{ minutes }} min read</span>
+            </div>
+            <div class="pf-article-banner">
+                <img [src]="image" [alt]="post.title" width="1200" height="630">
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="pf-article-body">
+            <p class="pf-article-lead">{{ post.excerpt }}</p>
+
+            @for (block of blocks; track $index) {
+            @switch (block.kind) {
+            @case ('h2') {
+            <h2>@for (part of block.parts; track $index) {@if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</h2>
+            }
+            @case ('h3') {
+            <h3>@for (part of block.parts; track $index) {@if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</h3>
+            }
+            @case ('p') {
+            <p>@for (part of block.parts; track $index) {@if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</p>
+            }
+            @case ('tip') {
+            <aside class="pf-article-tip"><i class="fa-solid fa-lightbulb"></i>
+                <p>@for (part of block.parts; track $index) {@if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</p>
+            </aside>
+            }
+            @case ('ul') {
+            <ul>
+                @for (item of block.items; track $index) {
+                <li>@for (part of item; track $index) {@if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</li>
+                }
+            </ul>
+            }
+            @case ('ol') {
+            <ol>
+                @for (item of block.items; track $index) {
+                <li>@for (part of item; track $index) {@if (part.bold) {<strong>{{ part.text }}</strong>} @else {<span>{{ part.text }}</span>}}</li>
+                }
+            </ol>
+            }
+            }
+            }
+
+            <div class="pf-article-cta">
+                <div>
+                    <h2>Need help with your Shopify store?</h2>
+                    <p>Talk to a Shopify expert at Perfictus. Book a free 30-minute consultation and get honest, practical advice for your store.</p>
+                </div>
+                <a routerLink="/contact" class="pf-btn">Book a Free Consultation <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</article>
+
+<section class="pf-section pf-section--alt pf-blog">
+    <div class="pf-grid-bg"></div>
+    <div class="container">
+        <div class="pf-section-head">
+            <div>
+                <span class="pf-eyebrow">Keep Reading</span>
+                <h2 class="pf-title">More Shopify <span class="pf-gradient-text">Articles</span></h2>
+            </div>
+            <a routerLink="/blog" class="pf-btn pf-btn--ghost">View All Articles <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="row g-4">
+            @for (item of related; track item.slug) {
+            <div class="col-lg-4 col-md-6">
+                <app-blog-card [post]="item" />
+            </div>
+            }
+        </div>
+    </div>
+</section>

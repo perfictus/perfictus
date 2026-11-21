@@ -42,11 +42,22 @@ export const CONSULTATION = {
   days: 'Every day, including weekends',
 };
 
+// Contact form on the Contact page. The site has no server, so the form posts to a small
+// Google Apps Script (scripts/contact-form-apps-script.gs) that emails each message to
+// info@perfictus.com with a copy to the team. Recipients are set inside that script, not here.
+// endpoint = the script's "Web app URL" (https://script.google.com/macros/s/…/exec).
+export const CONTACT_FORM = {
+  endpoint: 'https://script.google.com/macros/s/AKfycbwmdCBjNL7boflgTGOWwQCUDewxRLHwVRfu3BDd11eJ1WDFSxDoR85Tar6Vt79Mz1oX/exec',
+  topCountries: ['KW', 'IN', 'AE', 'SA', 'QA', 'BH', 'OM', 'GB', 'US'],
+  extraServices: ['Mobile App Development', 'Other'],
+};
+
 export const NAV_LINKS = [
   { title: 'Home', link: '/' },
   { title: 'Services', link: '/service' },
   { title: 'Portfolio', link: '/portfolio' },
   { title: 'About Us', link: '/about' },
+  { title: 'Blog', link: '/blog' },
   { title: 'Careers', link: '/careers' },
 ];
 
@@ -57,7 +68,7 @@ export const SERVICES = [
   {
     title: 'Shopify Development',
     icon: 'fa-brands fa-shopify',
-    desc: 'Certified expertise in Shopify Core (Liquid, Theme Customization) and advanced Storefront/GraphQL APIs. We build custom, scalable stores designed for high conversion.',
+    desc: 'Shopify store setup, custom theme development, Shopify Plus, migrations and custom apps. Expertise in Liquid, Online Store 2.0 and the Storefront/GraphQL APIs, building scalable stores designed for high conversion.',
   },
   {
     title: 'Remote Developer Outsourcing',
@@ -133,6 +144,7 @@ export const EDGE_POINTS = ['Expertise You Can Trust', 'Results-Driven Approach'
 export const PROJECTS = [
   {
     region: 'India',
+    type: 'Shopify Store',
     icon: 'assets/img/flags/india.svg',
     name: 'Tingle Tots',
     desc: 'Tingle Tots is an online store offering fun toys, diecast cars, RC vehicles, and kids’ gifts, sharing joy with every purchase.',
@@ -141,6 +153,7 @@ export const PROJECTS = [
   },
   {
     region: 'UK',
+    type: 'Shopify Store',
     icon: 'assets/img/flags/uk.svg',
     name: 'Boba Tea',
     desc: 'Boba Tea is an e-commerce-enabled beverage brand offering freshly made bubble tea and drinks for online ordering.',
@@ -149,6 +162,7 @@ export const PROJECTS = [
   },
   {
     region: 'USA',
+    type: 'Shopify Store',
     icon: 'assets/img/flags/usa.svg',
     name: 'The Mom Chic',
     desc: 'The Mom Chic is a United States fashion e-commerce store built on Shopify.',

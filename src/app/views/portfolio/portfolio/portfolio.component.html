@@ -9,9 +9,16 @@
             <h2 class="pf-title" data-aos="fade-up" data-aos-delay="100">Delivering Impact <span class="pf-gradient-text">Across Industries</span></h2>
             <div class="pf-tabs mt-4" role="tablist" data-aos="fade-up" data-aos-delay="200">
                 @for (item of projects; track item.name) {
-                <button type="button" role="tab" [class.is-active]="active === $index"
-                    [attr.aria-selected]="active === $index" (click)="select($index)">
+                <button type="button" role="tab" [class.is-active]="activeApp === null && active === $index"
+                    [attr.aria-selected]="activeApp === null && active === $index" (click)="select($index)">
                     <img [src]="item.icon" alt=""> {{ item.region }}
+                </button>
+                }
+                <!-- Mobile apps (e.g. Kuwait): jump down to the app instead of switching the project -->
+                @for (app of apps; track app.name) {
+                <button type="button" role="tab" [class.is-active]="activeApp === $index"
+                    [attr.aria-selected]="activeApp === $index" (click)="scrollToApp($index)" [attr.aria-label]="app.region + ': ' + app.name + ' app'">
+                    <img [src]="app.flag" alt=""> {{ app.region }}
                 </button>
                 }
             </div>
@@ -21,7 +28,7 @@
         <div class="pf-project">
             <div class="row align-items-center g-5">
                 <div class="col-lg-5">
-                    <span class="pf-project-region"><img [src]="item.icon" alt=""> {{ item.region }}</span>
+                    <span class="pf-project-region"><img [src]="item.icon" alt=""> <span>{{ item.region }} &middot; <span class="pf-project-type">{{ item.type }}</span></span></span>
                     <h3 class="pf-project-name">{{ item.name }}</h3>
                     <p class="pf-lead">{{ item.desc }}</p>
                     @if (item.url) {
@@ -60,7 +67,7 @@
         </div>
 
         @for (app of apps; track app.name) {
-        <div class="pf-app">
+        <div class="pf-app" [id]="'app-' + $index">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
                     <div class="pf-app-head">
