@@ -24,6 +24,15 @@ export class ConsentService {
     const saved = this.read();
     if (saved === 'granted') this.load();
     else if (!saved) this.open.set(true);
+
+    // Phone, email and WhatsApp clicks are leads too – record which one was used.
+    document.addEventListener('click', (e) => {
+      const a = (e.target as HTMLElement | null)?.closest?.('a[href]') as HTMLAnchorElement | null;
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      const method = href.startsWith('tel:') ? 'phone' : href.startsWith('mailto:') ? 'email' : /wa\.me|whatsapp/.test(href) ? 'whatsapp' : '';
+      if (method) this.track('contact_click', { method, link_url: href, page_path: location.pathname });
+    }, { capture: true });
   }
 
   accept() { this.save('granted'); this.open.set(false); this.load(); }
@@ -37,6 +46,12 @@ export class ConsentService {
       document.cookie.split(';').map((c) => c.split('=')[0].trim()).filter((n) => n.startsWith('_ga'))
         .forEach((n) => { document.cookie = `${n}=; Max-Age=0; path=/; domain=.${location.hostname.replace(/^www\./, '')}`; document.cookie = `${n}=; Max-Age=0; path=/`; });
     }
+  }
+
+  /** Send a GA4 event – only after the visitor has accepted analytics. */
+  track(event: string, params: Record<string, unknown> = {}) {
+    if (!this.isBrowser || !this.loaded || this.read() !== 'granted') return;
+    (window as any).gtag?.('event', event, params);
   }
 
   /** "Cookie settings" link: show the banner again */

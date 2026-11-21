@@ -3,6 +3,7 @@ import { Component, PLATFORM_ID, inject, signal } from '@angular/core';
 import { AbstractControl, FormBuilder, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
 import { AsYouType, CountryCode, getCountries, getCountryCallingCode, parsePhoneNumberFromString } from 'libphonenumber-js';
 import { CONTACT, CONTACT_FORM, SERVICES } from '../../../../../data/site-content';
+import { ConsentService } from '../../../../../service/consent.service';
 
 interface Country { code: CountryCode; name: string; dial: string; flag: string; }
 
@@ -36,6 +37,7 @@ export class ContactFormComponent {
 
   sending = signal(false);
   sent = signal(false);
+  private consent = inject(ConsentService);
   error = signal('');
 
   form = this.fb.nonNullable.group(
@@ -128,6 +130,7 @@ export class ContactFormComponent {
       const data = await res.json().catch(() => ({}));
       if (!res.ok || data.ok !== true) throw new Error(data.error || res.statusText);
       this.sent.set(true);
+      this.consent.track('generate_lead', { method: 'contact_form', service: v.service, country: v.country, page_path: location.pathname });
       this.form.reset({ country: v.country });
     } catch (e) {
       console.error('Contact form failed', e);
